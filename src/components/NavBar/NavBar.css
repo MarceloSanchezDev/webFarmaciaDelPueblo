@@ -1,0 +1,102 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  height: 78px;
+  padding: 0 max(24px, calc((100vw - 1180px) / 2));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  border-bottom: 1px solid #d8e3d9;
+  box-shadow: 0 4px 20px rgba(31, 93, 51, 0.08);
+}
+
+.navbar__brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: #196f3d;
+  font-family: "Source Serif 4", serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.navbar__logo {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background-color: #d9f0e1;
+  color: #196f3d;
+}
+
+.navbar__links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.navbar__links a {
+  color: #1a1c1c;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.navbar__links a:hover {
+  color: #196f3d;
+}
+
+.navbar__whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 18px;
+  border-radius: 999px;
+  background-color: #196f3d;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.navbar__whatsapp:hover {
+  background-color: #0f4f2a;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 980px) {
+  .navbar {
+    height: auto;
+    padding: 16px 20px;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .navbar__links {
+    width: 100%;
+    order: 3;
+    overflow-x: auto;
+    padding-bottom: 4px;
+  }
+
+  .navbar__links a {
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 620px) {
+  .navbar__brand span {
+    font-size: 1.1rem;
+  }
+
+  .navbar__whatsapp {
+    padding: 10px 14px;
+    font-size: 0.9rem;
+  }
+}
