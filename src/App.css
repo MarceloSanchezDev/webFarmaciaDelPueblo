@@ -1,0 +1,354 @@
+/* =========================
+   BASE (TELÉFONO - MOBILE FIRST)
+========================= */
+
+.sticky {
+  position: sticky;
+  top: 0;
+}
+.top-100{
+  top: 100px;
+}
+.fixed {
+  position: fixed;
+  top: 0;
+}
+.overflow-hidden {
+    overflow: hidden;
+}
+.object-cover {
+  object-fit: cover;
+}
+
+.z-0 {
+  z-index: 0;
+}
+.z-50 {
+  z-index: 50;
+}
+.inset-0 {
+  inset: 0px;
+}
+.relative{
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
+}
+
+.between {
+  justify-content: space-between;
+}
+
+.around {
+  justify-content: space-around;
+}
+
+.alignCenter {
+  align-items: center;
+}
+
+.alignStart {
+  align-items: flex-start;
+}
+
+.alignEnd {
+  align-items: flex-end;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+.justifyCenter {
+  justify-content: center;
+}
+/* GAP */
+.gap-1 {
+  gap: 0.25rem;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.gap-3 {
+  gap: 0.75rem;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+/* WIDTH */
+.width-100 {
+  width: 100%;
+}
+
+.width-75 {
+  width: 75%;
+}
+
+.width-50 {
+  width: 50%;
+}
+
+.width-25 {
+  width: 25%;
+}
+.hidden{
+  overflow: hidden;
+}
+/* HEIGHT */
+.height-100 {
+  height: 100%;
+}
+
+.height-75 {
+  height: 75%;
+}
+
+.height-50 {
+  height: 50%;
+}
+
+/* MARGIN */
+.margin-0 {
+  margin: 0;
+}
+
+.margin-1 {
+  margin: 0.25rem;
+}
+
+.margin-2 {
+  margin: 0.5rem;
+}
+
+.margin-3 {
+  margin: 0.75rem;
+}
+
+.margin-4 {
+  margin: 1rem;
+}
+
+/* PADDING */
+.padding-0 {
+  padding: 0;
+}
+
+.padding-1 {
+  padding: 0.25rem;
+}
+
+.padding-2 {
+  padding: 0.5rem;
+}
+
+.padding-3 {
+  padding: 0.75rem;
+}
+
+.padding-4 {
+  padding: 1rem;
+}
+
+
+/* =========================
+   TABLET (≥ 768px)
+========================= */
+
+@media (min-width: 768px) {
+
+  .flex-md {
+    display: flex;
+  }
+
+  .flex-md-row {
+    flex-direction: row;
+  }
+
+  .flex-md-col {
+    flex-direction: column;
+  }
+
+  .center-md {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .between-md {
+    justify-content: space-between;
+  }
+
+  .justify-md-end {
+    justify-content: flex-end;
+  }
+.justify-md-Center {
+  justify-content: center;
+}
+  .alignCenter-md {
+    align-items: center;
+  }
+
+  /* WIDTH */
+  .width-md-100 {
+    width: 100%;
+  }
+
+  .width-md-75 {
+    width: 75%;
+  }
+
+  .width-md-50 {
+    width: 50%;
+  }
+
+  .width-md-25 {
+    width: 25%;
+  }
+
+  /* HEIGHT */
+  .height-md-100 {
+    height: 100%;
+  }
+  /* GAP */
+  .gap-md-1 {
+    gap: 0.25rem;
+  }
+
+  .gap-md-2 {
+    gap: 0.5rem;
+  }
+
+  .gap-md-3 {
+    gap: 0.75rem;
+  }
+
+  .gap-md-4 {
+    gap: 1rem;
+  }
+
+  /* PADDING */
+  .padding-md-1 {
+    padding: 0.25rem;
+  }
+
+  .padding-md-2 {
+    padding: 0.5rem;
+  }
+
+  .padding-md-3 {
+    padding: 0.75rem;
+  }
+
+  .padding-md-4 {
+    padding: 1rem;
+  }
+}
+
+
+/* =========================
+   DESKTOP (≥ 1024px)
+========================= */
+
+@media (min-width: 1024px) {
+
+  .flex-lg {
+    display: flex;
+  }
+
+  .flex-lg-row {
+    flex-direction: row;
+  }
+
+  .flex-lg-col {
+    flex-direction: column;
+  }
+
+  .center-lg {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .between-lg {
+    justify-content: space-between;
+  }
+
+  .alignCenter-lg {
+    align-items: center;
+  }
+
+  /* WIDTH */
+  .width-lg-100 {
+    width: 100%;
+  }
+
+  .width-lg-75 {
+    width: 75%;
+  }
+
+  .width-lg-50 {
+    width: 50%;
+  }
+
+  .width-lg-25 {
+    width: 25%;
+  }
+
+  /* HEIGHT */
+  .height-lg-100 {
+    height: 100%;
+  }
+
+  /* GAP */
+  .gap-lg-1 {
+    gap: 0.25rem;
+  }
+
+  .gap-lg-2 {
+    gap: 0.5rem;
+  }
+
+  .gap-lg-3 {
+    gap: 0.75rem;
+  }
+
+  .gap-lg-4 {
+    gap: 1rem;
+  }
+
+  /* PADDING */
+  .padding-lg-1 {
+    padding: 0.25rem;
+  }
+
+  .padding-lg-2 {
+    padding: 0.5rem;
+  }
+
+  .padding-lg-3 {
+    padding: 0.75rem;
+  }
+
+  .padding-lg-4 {
+    padding: 1rem;
+  }
+}

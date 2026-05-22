@@ -1,28 +1,93 @@
+import { useEffect, useState } from "react";
 import "./NavBar.css";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
+  
+  const [show, setShow] = useState(true);
+  const [widthWindow, setWidthWindow] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWidthWindow(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  if (widthWindow < 750) {
+    return (
+      <header className="header width-100 fixed z-50">
+        {show ? (
+          <nav className="padding-4">
+            <div className="flex center between width-100 gap-2">
+              <div className="logo width-100 flex center">
+                Farmacia Del Pueblo
+              </div>
+
+              <span
+                className="material-symbols-outlined"
+                onClick={() => setShow(false)}
+              >
+                menu
+              </span>
+            </div>
+          </nav>
+        ) : (
+          <nav className="padding-4">
+            <div className="flex flex-col center width-100 gap-4">
+              <div className="logo flex center width-100 flex between alignCenter">
+                                Farmacia Del Pueblo
+                <span
+                  className="material-symbols-outlined"
+                  onClick={() => setShow(true)}
+                >
+                  close
+                </span>
+              </div>
+
+              <div className="width-100 flex flex-col center gap-4">
+                <Link to={"/"}>Inicio</Link>
+                <Link to={"/preparados"}>Preparados</Link>
+                <Link to={"/quienesSomos"}>Quiénes Somos</Link>
+
+                <Link to={"/especialidades"}>Especialidades</Link>
+                <Link to={"/FAQ"}>Recomendaciones</Link>
+              </div>
+            </div>
+          </nav>
+        )}
+      </header>
+    );
+  }
   return (
-    <header className="navbar">
-      <a href="/" className="navbar__brand">
-        <div className="navbar__logo">
-          <span className="material-symbols-outlined">local_pharmacy</span>
+    <header className="header width-100 fixed z-50">
+      <nav className="padding-4">
+        <div className="flex flex-row alignCenter between width-100 gap-4">
+          <div className="logo flex center gap-2">
+            Farmacia Del Pueblo
+          </div>
+
+          <div className="flex alignCenter gap-4">
+            <Link to={"/"}>Inicio</Link>
+            <Link to={"/preparados"}>Preparados</Link>
+            <Link to={"/quienesSomos"}>Quiénes Somos</Link>
+            <Link to={"/especialidades"}>Especialidades</Link>
+
+            <Link to={"/FAQ"}>Recomendaciones</Link>
+          </div>
+          {/*
+        
+          <div className="flex alignCenter">
+            <Button variant="primary">Acceso Paciente</Button>
+          </div>
+        */}
         </div>
-
-        <span>Farmacia Del Pueblo</span>
-      </a>
-
-      <nav className="navbar__links">
-        <a href="/">Inicio</a>
-        <a href="/historia">Nuestra historia</a>
-        <a href="/servicios">Servicios</a>
-        <a href="/contacto">Ubicación y contacto</a>
-        <a href="/comunidad">Comunidad</a>
       </nav>
-
-      <a className="navbar__whatsapp" href="https://wa.me/" target="_blank">
-        <span className="material-symbols-outlined">chat</span>
-        WhatsApp
-      </a>
     </header>
   );
 };
