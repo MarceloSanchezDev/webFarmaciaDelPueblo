@@ -52,8 +52,8 @@ const Navbar = () => {
 
               <div className="width-100 flex flex-col center gap-4">
                 <Link to={"/"}>Inicio</Link>
-                <Link to={"/preparados"}>Preparados</Link>
-                <Link to={"/quienesSomos"}>Quiénes Somos</Link>
+                <Link to={"/Historia"}>Historia</Link>
+                <Link to={"/Servicios"}>Servicios</Link>
 
                 <Link to={"/especialidades"}>Especialidades</Link>
                 <Link to={"/FAQ"}>Recomendaciones</Link>
@@ -73,12 +73,12 @@ const Navbar = () => {
           </div>
 
           <div className="flex alignCenter gap-4">
-            <Link to={"/"}>Inicio</Link>
-            <Link to={"/preparados"}>Preparados</Link>
-            <Link to={"/quienesSomos"}>Quiénes Somos</Link>
-            <Link to={"/especialidades"}>Especialidades</Link>
+                           <Link to={"/"}>Inicio</Link>
+                <Link to={"/Historia"}>Historia</Link>
+                <Link to={"/Servicios"}>Servicios</Link>
+            <Link to={"/contacto"}>Contacto</Link>
 
-            <Link to={"/FAQ"}>Recomendaciones</Link>
+            <Link to={"/comunidad"}>Comunidad</Link>
           </div>
           {/*
         

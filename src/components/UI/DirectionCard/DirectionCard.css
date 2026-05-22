@@ -1,0 +1,47 @@
+.direction-card {
+  padding: 24px;
+  border-radius: var(--radius-md);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+}
+
+.direction-card__header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+  color: var(--color-primary);
+}
+
+.direction-card__header > span {
+  font-size: 28px;
+}
+
+.direction-card__header h3 {
+  margin: 0;
+  color: var(--color-primary-dark);
+  font-size: 0.95rem;
+  font-weight: 800;
+}
+
+.direction-card ul {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.direction-card li {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  color: var(--color-muted);
+  line-height: 1.6;
+}
+
+.direction-card li span {
+  margin-top: 3px;
+  color: var(--color-muted);
+  font-size: 18px;
+}
