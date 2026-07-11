@@ -1,95 +1,66 @@
-import { useEffect, useState } from "react";
-import "./NavBar.css";
-import { Link } from "react-router-dom";
+import { useState } from 'react';
+import { Link, NavLink } from 'react-router-dom';
+import { getWhatsappUrl, pharmacyContact } from '../../data/contactData';
+import { navigationLinks } from '../../data/navigationData';
+import './NavBar.css';
 
-const Navbar = () => {
-  
-  const [show, setShow] = useState(true);
-  const [widthWindow, setWidthWindow] = useState(window.innerWidth);
+function Navbar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  useEffect(() => {
-    const handleResize = () => {
-      setWidthWindow(window.innerWidth);
-    };
+  const handleCloseMenu = () => {
+    setIsMenuOpen(false);
+  };
 
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
-  if (widthWindow < 750) {
-    return (
-      <header className="header width-100 fixed z-50">
-        {show ? (
-          <nav className="padding-4">
-            <div className="flex center between width-100 gap-2">
-              <div className="logo width-100 flex center">
-                Farmacia Del Pueblo
-              </div>
-
-              <span
-                className="material-symbols-outlined"
-                onClick={() => setShow(false)}
-              >
-                menu
-              </span>
-            </div>
-          </nav>
-        ) : (
-          <nav className="padding-4">
-            <div className="flex flex-col center width-100 gap-4">
-              <div className="logo flex center width-100 flex between alignCenter">
-                                Farmacia Del Pueblo
-                <span
-                  className="material-symbols-outlined"
-                  onClick={() => setShow(true)}
-                >
-                  close
-                </span>
-              </div>
-
-              <div className="width-100 flex flex-col center gap-4">
-                <Link to={"/"}>Inicio</Link>
-                <Link to={"/Historia"}>Historia</Link>
-                <Link to={"/Servicios"}>Servicios</Link>
-
-                <Link to={"/especialidades"}>Especialidades</Link>
-                <Link to={"/FAQ"}>Recomendaciones</Link>
-              </div>
-            </div>
-          </nav>
-        )}
-      </header>
-    );
-  }
   return (
-    <header className="header width-100 fixed z-50">
-      <nav className="padding-4">
-        <div className="flex flex-row alignCenter between width-100 gap-4">
-          <div className="logo flex center gap-2">
-            Farmacia Del Pueblo
+    <header className="site-header">
+      <nav className="navbar" aria-label="Navegación principal">
+        <Link className="navbar__brand" to="/" onClick={handleCloseMenu}>
+          <span className="navbar__logo" aria-hidden="true">
+            +
+          </span>
+          <span>{pharmacyContact.name}</span>
+        </Link>
+
+        <button
+          type="button"
+          className="navbar__toggle"
+          aria-label={isMenuOpen ? 'Cerrar menú' : 'Abrir menú'}
+          aria-expanded={isMenuOpen}
+          onClick={() => setIsMenuOpen((currentValue) => !currentValue)}
+        >
+          <span className="material-symbols-outlined" aria-hidden="true">
+            {isMenuOpen ? 'close' : 'menu'}
+          </span>
+        </button>
+
+        <div className={`navbar__menu ${isMenuOpen ? 'navbar__menu--open' : ''}`}>
+          <div className="navbar__links">
+            {navigationLinks.map((link) => (
+              <NavLink
+                key={link.path}
+                to={link.path}
+                onClick={handleCloseMenu}
+                className={({ isActive }) =>
+                  isActive ? 'navbar__link navbar__link--active' : 'navbar__link'
+                }
+              >
+                {link.label}
+              </NavLink>
+            ))}
           </div>
 
-          <div className="flex alignCenter gap-4">
-                           <Link to={"/"}>Inicio</Link>
-                <Link to={"/Historia"}>Historia</Link>
-                <Link to={"/Servicios"}>Servicios</Link>
-            <Link to={"/contacto"}>Contacto</Link>
-
-            <Link to={"/comunidad"}>Comunidad</Link>
-          </div>
-          {/*
-        
-          <div className="flex alignCenter">
-            <Button variant="primary">Acceso Paciente</Button>
-          </div>
-        */}
+          <a
+            className="navbar__whatsapp"
+            href={getWhatsappUrl()}
+            target="_blank"
+            rel="noreferrer"
+          >
+            WhatsApp
+          </a>
         </div>
       </nav>
     </header>
   );
-};
+}
 
 export default Navbar;

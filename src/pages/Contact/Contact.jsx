@@ -1,173 +1,149 @@
-import "./Contact.css";
+import {
+  getFullAddress,
+  getWhatsappUrl,
+  pharmacyContact,
+} from '../../data/contactData';
+import './Contact.css';
 
-import Button from "../../components/UI/Buttons/Buttons";
-import ContactInfoItem from "../../components/UI/ContactInfoItem/ContactInfoItem";
-import DirectionCard from "../../components/UI/DirectionCard/DirectionCard";
-
-const publicTransportItems = [
-  "Líneas de colectivo cercanas a la farmacia.",
-  "Acceso fácil desde puntos principales del barrio.",
-];
-
-const carItems = [
-  "Estacionamiento disponible en calles cercanas.",
-  "Acceso rápido desde avenidas principales.",
-];
-
-const Contact = () => {
+function Contact() {
   return (
- 
+    <main className="contact-page">
+      <section className="contact-hero">
+        <div className="contact-hero__content">
+          <span className="section-kicker">Contacto</span>
 
-      <main className="contact-page">
-        <section className="contact-map-hero">
-          <div className="contact-map-hero__overlay"></div>
+          <h1>Estamos para ayudarte</h1>
 
-          <div className="contact-map-hero__pin">
-            <div className="contact-map-hero__logo">
-              <span className="material-symbols-outlined">local_pharmacy</span>
-            </div>
+          <p>
+            Comunicate con {pharmacyContact.name} para consultar disponibilidad,
+            servicios, obras sociales o información sobre medicamentos.
+          </p>
 
-            <div className="contact-map-hero__dot"></div>
+          <div className="contact-hero__actions">
+            <a
+              className="primary-button"
+              href={getWhatsappUrl()}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Escribir por WhatsApp
+            </a>
+
+            <a
+              className="secondary-button"
+              href={pharmacyContact.mapsUrl}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Cómo llegar
+            </a>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section className="contact-content">
-          <div className="contact-content__grid">
-            <div className="contact-content__left">
-              <article className="contact-store-card">
-                <img
-                  src="/images/farmacia-frente.jpg"
-                  alt="Frente de Farmacia Del Pueblo"
-                  className="contact-store-card__image"
-                />
+      <section className="contact-content">
+        <div className="contact-card">
+          <span className="material-symbols-outlined" aria-hidden="true">
+            location_on
+          </span>
 
-                <div className="contact-store-card__content">
-                  <div className="contact-store-card__label">
-                    <span className="material-symbols-outlined">storefront</span>
-                    <span>Nuestra ubicación histórica</span>
-                  </div>
-
-                  <h1>Visitá Farmacia Del Pueblo</h1>
-
-                  <p>
-                    Estamos ubicados en el corazón del barrio, acompañando a la
-                    comunidad con atención cercana, profesional y humana desde
-                    hace más de un siglo.
-                  </p>
-                </div>
-              </article>
-
-              <section className="directions-section">
-                <div className="directions-section__title">
-                  <span className="material-symbols-outlined">directions</span>
-                  <h2>Cómo llegar</h2>
-                </div>
-
-                <div className="directions-section__grid">
-                  <DirectionCard
-                    icon="directions_bus"
-                    title="En transporte público"
-                    items={publicTransportItems}
-                  />
-
-                  <DirectionCard
-                    icon="directions_car"
-                    title="En auto"
-                    items={carItems}
-                  />
-                </div>
-              </section>
-            </div>
-
-            <aside className="contact-details-card">
-              <h2>Datos de contacto</h2>
-
-              <div className="contact-details-card__list">
-                <ContactInfoItem
-                  icon="location_on"
-                  label="Dirección"
-                  actionLabel="Abrir mapa"
-                  actionHref="https://maps.google.com"
-                >
-                  <p>
-                    Agregar dirección real
-                    <br />
-                    Farmacia Del Pueblo
-                    <br />
-                    Buenos Aires, Argentina
-                  </p>
-                </ContactInfoItem>
-
-                <ContactInfoItem icon="schedule" label="Horarios">
-                  <div className="contact-hours">
-                    <div>
-                      <span>Lunes a viernes</span>
-                      <strong>08:00 - 20:00</strong>
-                    </div>
-
-                    <div>
-                      <span>Sábado</span>
-                      <strong>09:00 - 18:00</strong>
-                    </div>
-
-                    <div>
-                      <span>Domingos y feriados</span>
-                      <strong className="contact-hours__closed">Cerrado</strong>
-                    </div>
-                  </div>
-                </ContactInfoItem>
-
-                <ContactInfoItem
-                  icon="call"
-                  label="Teléfono"
-                  actionLabel="Llamar"
-                  actionHref="tel:+540000000000"
-                >
-                  <p>+54 000 0000-0000</p>
-                </ContactInfoItem>
-              </div>
-
-              <div className="contact-whatsapp">
-                <a
-                  href="https://wa.me/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="contact-whatsapp__button"
-                >
-                  <span className="material-symbols-outlined">chat</span>
-                  Escribir por WhatsApp
-                </a>
-
-                <p>Tiempo estimado de respuesta: menos de 10 minutos.</p>
-              </div>
-            </aside>
-          </div>
-        </section>
-
-        <section className="contact-cta">
           <div>
-            <span className="section-eyebrow">Estamos cerca</span>
-            <h2>Acercate o escribinos</h2>
+            <h2>Dirección</h2>
+            <p>{getFullAddress()}</p>
+
+            <a
+              href={pharmacyContact.mapsUrl}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Abrir en Google Maps
+            </a>
+          </div>
+        </div>
+
+        <div className="contact-card">
+          <span className="material-symbols-outlined" aria-hidden="true">
+            call
+          </span>
+
+          <div>
+            <h2>Teléfono</h2>
+            <p>{pharmacyContact.phone}</p>
+
+            <a
+              href={getWhatsappUrl()}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Consultar por WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <div className="contact-card">
+          <span className="material-symbols-outlined" aria-hidden="true">
+            schedule
+          </span>
+
+          <div>
+            <h2>Horarios</h2>
+
+            <ul className="contact-hours">
+              {pharmacyContact.openingHours.map((item) => (
+                <li key={item.day}>
+                  <strong>{item.day}</strong>
+                  <span>{item.hours}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        <div className="contact-card">
+          <span className="material-symbols-outlined" aria-hidden="true">
+            medical_services
+          </span>
+
+          <div>
+            <h2>Servicios</h2>
+
+            <ul className="contact-services">
+              {pharmacyContact.services.map((service) => (
+                <li key={service}>{service}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section className="contact-map-section">
+        <div className="contact-map-card">
+          <div>
+            <span className="section-kicker">Ubicación</span>
+            <h2>Encontranos fácilmente</h2>
             <p>
-              Nuestro equipo está disponible para ayudarte con consultas,
-              servicios farmacéuticos, obras sociales y atención personalizada.
+              Usá el mapa para llegar a la farmacia o escribinos por WhatsApp
+              para confirmar horarios y atención disponible.
             </p>
           </div>
 
-          <div className="contact-cta__actions">
-            <Button href="https://maps.google.com" target="_blank">
+          <div className="contact-map-placeholder">
+            <span className="material-symbols-outlined" aria-hidden="true">
+              map
+            </span>
+            <p>Mapa de ubicación</p>
+            <a
+              href={pharmacyContact.mapsUrl}
+              target="_blank"
+              rel="noreferrer"
+            >
               Ver ubicación
-            </Button>
-
-            <Button href="https://wa.me/" target="_blank" variant="secondary">
-              WhatsApp
-            </Button>
+            </a>
           </div>
-        </section>
-      </main>
-
-     
+        </div>
+      </section>
+    </main>
   );
-};
+}
 
 export default Contact;

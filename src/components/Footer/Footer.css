@@ -1,62 +1,84 @@
-.footer {
+.site-footer {
+  background-color: #123722;
+  color: #ffffff;
+  padding: 56px 0 24px;
+}
+
+.footer-grid {
+  width: min(100% - 32px, 1180px);
+  margin: 0 auto;
+
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  grid-template-columns: 1.4fr 0.8fr 1fr 1fr;
   gap: 32px;
-  padding: 70px max(24px, calc((100vw - 1180px) / 2)) 32px;
-  background-color: #f7f7f7;
-  border-top: 1px solid #d8e3d9;
 }
 
-.footer h3,
-.footer h4 {
-  margin: 0;
-  font-family: "Source Serif 4", serif;
-  color: #196f3d;
+.footer-brand h2 {
+  margin: 0 0 12px;
+  font-family: 'Source Serif 4', serif;
+  font-size: 1.8rem;
 }
 
-.footer h3 {
-  font-size: 2rem;
+.footer-brand p,
+.footer-list li,
+.footer-bottom p {
+  color: rgba(255, 255, 255, 0.74);
+  line-height: 1.7;
 }
 
-.footer h4 {
-  margin-bottom: 16px;
-  font-size: 1.3rem;
+.site-footer h3 {
+  margin: 0 0 16px;
+  color: #a8e6bd;
+  font-size: 0.84rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
 }
 
-.footer p,
-.footer a {
-  margin: 0 0 10px;
-  color: #5d6b60;
-  font-size: 0.95rem;
-  line-height: 1.6;
+.footer-links {
+  display: grid;
+  gap: 10px;
 }
 
-.footer a {
-  display: block;
+.footer-links a,
+.footer-list a {
+  color: rgba(255, 255, 255, 0.82);
   text-decoration: none;
-  transition: color 0.2s ease;
 }
 
-.footer a:hover {
-  color: #196f3d;
+.footer-links a:hover,
+.footer-list a:hover {
+  color: #ffffff;
 }
 
-.footer__bottom {
-  grid-column: 1 / -1;
-  padding-top: 24px;
-  margin-top: 24px;
-  border-top: 1px solid #d8e3d9;
+.footer-list {
+  display: grid;
+  gap: 10px;
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-@media (max-width: 850px) {
-  .footer {
+.footer-bottom {
+  width: min(100% - 32px, 1180px);
+  margin: 40px auto 0;
+  padding-top: 22px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 920px) {
+  .footer-grid {
     grid-template-columns: 1fr 1fr;
   }
 }
 
-@media (max-width: 560px) {
-  .footer {
+@media (max-width: 620px) {
+  .footer-grid {
     grid-template-columns: 1fr;
-    padding: 56px 20px 28px;
   }
 }

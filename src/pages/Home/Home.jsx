@@ -1,12 +1,14 @@
 import "./Home.css";
-
-import Navbar from "../../components/NavBar/NavBar";
-import Footer from "../../components/Footer/Footer";
 import Button from "../../components/UI/Buttons/Buttons";
 import SectionHeader from "../../components/UI/SectionHeader/SectionHeader";
 import InfoCard from "../../components/UI/InfoCard/InfoCard";
 import ServiceCard from "../../components/UI/ServiceCard/ServiceCard";
-
+import {
+  getFullAddress,
+  getWhatsappUrl,
+  pharmacyContact,
+} from '../../data/contactData';
+import './Home.css';
 const trustItems = [
   {
     icon: "history_edu",
@@ -83,8 +85,6 @@ const communityItems = [
 const Home = () => {
   return (
     <>
-      <Navbar />
-
       <main className="home">
         <section className="hero">
           <div className="hero__overlay"></div>
@@ -226,9 +226,133 @@ const Home = () => {
             ))}
           </div>
         </section>
-      </main>
+        <section className="home-hero">
+          <div className="home-hero__content">
+            <span className="section-kicker">Farmacia de confianza</span>
 
-      <Footer />
+            <h1>Salud, cercanía y atención profesional para tu comunidad</h1>
+
+            <p>
+              En {pharmacyContact.name} te acompañamos con atención farmacéutica,
+              asesoramiento personalizado y servicios pensados para el cuidado diario.
+            </p>
+
+            <div className="home-hero__actions">
+              <a
+                className="primary-button"
+                href={getWhatsappUrl()}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Consultar por WhatsApp
+              </a>
+
+              <a
+                className="secondary-button"
+                href={pharmacyContact.mapsUrl}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Cómo llegar
+              </a>
+            </div>
+
+            <div className="home-hero__info">
+              <article>
+                <span className="material-symbols-outlined" aria-hidden="true">
+                  location_on
+                </span>
+                <div>
+                  <strong>Ubicación</strong>
+                  <p>{getFullAddress()}</p>
+                </div>
+              </article>
+
+              <article>
+                <span className="material-symbols-outlined" aria-hidden="true">
+                  schedule
+                </span>
+                <div>
+                  <strong>Horarios</strong>
+                  <p>{pharmacyContact.openingHours[0].hours}</p>
+                </div>
+              </article>
+
+              <article>
+                <span className="material-symbols-outlined" aria-hidden="true">
+                  call
+                </span>
+                <div>
+                  <strong>Contacto</strong>
+                  <p>{pharmacyContact.phone}</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+        <section className="home-location">
+          <div className="home-location__content">
+            <div>
+              <span className="section-kicker">Dónde estamos</span>
+
+              <h2>Encontranos cerca tuyo</h2>
+
+              <p>
+                Visitá {pharmacyContact.name} para recibir atención personalizada o
+                escribinos por WhatsApp para consultar disponibilidad, horarios y
+                servicios.
+              </p>
+
+              <ul className="home-location__list">
+                <li>
+                  <strong>Dirección:</strong> {getFullAddress()}
+                </li>
+                <li>
+                  <strong>Teléfono:</strong> {pharmacyContact.phone}
+                </li>
+                <li>
+                  <strong>Horario:</strong> {pharmacyContact.openingHours[0].day},{' '}
+                  {pharmacyContact.openingHours[0].hours}
+                </li>
+              </ul>
+
+              <div className="home-location__actions">
+                <a
+                  className="primary-button"
+                  href={getWhatsappUrl()}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Escribir por WhatsApp
+                </a>
+
+                <a
+                  className="secondary-button"
+                  href={pharmacyContact.mapsUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Abrir mapa
+                </a>
+              </div>
+            </div>
+
+            <div className="home-location__map">
+              <span className="material-symbols-outlined" aria-hidden="true">
+                map
+              </span>
+              <p>Mapa de ubicación</p>
+              <a
+                href={pharmacyContact.mapsUrl}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Ver en Google Maps
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
     </>
   );
 };

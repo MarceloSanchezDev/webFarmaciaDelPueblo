@@ -1,135 +1,123 @@
-import "./Services.css";
-import Button from "../../components/UI/Buttons/Buttons";
-import SectionHeader from "../../components/UI/SectionHeader/SectionHeader";
-import ServiceDetailCard from "../../components/UI/ServiceDetailCard/ServiceDetailCard";
+import { getWhatsappUrl, pharmacyContact } from '../../data/contactData';
+import { healthInsurances, pharmacyServices } from '../../data/servicesData';
+import './Services.css';
 
-const services = [
-  {
-    icon: "local_pharmacy",
-    title: "Atención farmacéutica",
-    description:
-      "Brindamos asesoramiento profesional sobre medicamentos, indicaciones, interacciones y uso responsable de cada tratamiento.",
-  },
-  {
-    icon: "health_and_safety",
-    title: "Obras sociales",
-    description:
-      "Trabajamos con distintas obras sociales y planes médicos para facilitar el acceso de nuestros vecinos a sus medicamentos.",
-  },
-  {
-    icon: "monitor_heart",
-    title: "Control de presión",
-    description:
-      "Realizamos controles de presión arterial en un entorno tranquilo, cercano y profesional para acompañar el cuidado diario de la salud.",
-  },
-  {
-    icon: "spa",
-    title: "Dermocosmética",
-    description:
-      "Ofrecemos asesoramiento en productos dermatológicos, cuidado de la piel, protección diaria y bienestar personal.",
-  },
-  {
-    icon: "vaccines",
-    title: "Aplicaciones e inyectables",
-    description:
-      "Aplicación segura y profesional de inyectables indicados, realizada con responsabilidad y cuidado por personal capacitado.",
-  },
-  {
-    icon: "support_agent",
-    title: "Asesoramiento integral",
-    description:
-      "Nuestro equipo está disponible para orientar, escuchar consultas y acompañar a cada persona con atención humana y personalizada.",
-  },
-];
-
-const Services = () => {
+function Services() {
   return (
-    
-      <main className="services-page">
-        <section className="services-hero">
-          <div className="services-hero__content">
-            <span className="services-hero__badge">Servicios</span>
+    <main className="services-page">
+      <section className="services-hero">
+        <div className="services-hero__content">
+          <span className="section-kicker">Servicios</span>
 
-            <h1>Nuestros servicios</h1>
+          <h1>Servicios farmacéuticos para el cuidado diario</h1>
 
-            <p>
-              Combinamos la tradición de una farmacia de barrio con atención
-              profesional moderna. Ofrecemos servicios pensados para acompañar
-              las necesidades de nuestra comunidad.
-            </p>
+          <p>
+            En {pharmacyContact.name} ofrecemos atención cercana,
+            asesoramiento profesional y servicios pensados para acompañar a la
+            comunidad.
+          </p>
+
+          <div className="services-hero__actions">
+            <a
+              className="primary-button"
+              href={getWhatsappUrl()}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Consultar por WhatsApp
+            </a>
+
+            <a className="secondary-button" href="/contacto">
+              Ver contacto y horarios
+            </a>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section className="services-section">
-          <SectionHeader
-            eyebrow="Atención profesional"
-            title="Servicios para cuidar tu salud"
-            description="En Farmacia Del Pueblo brindamos atención cercana, asesoramiento responsable y soluciones cotidianas para el bienestar de cada familia."
-          />
+      <section className="services-grid-section">
+        <div className="services-grid">
+          {pharmacyServices.map((service) => (
+            <article className="service-card" key={service.title}>
+              <span className="material-symbols-outlined" aria-hidden="true">
+                {service.icon}
+              </span>
 
-          <div className="services-detail-grid">
-            {services.map((service) => (
-              <ServiceDetailCard
-                key={service.title}
-                icon={service.icon}
-                title={service.title}
-                description={service.description}
-              />
-            ))}
+              <h2>{service.title}</h2>
 
-            <article className="service-whatsapp-card">
-              <div className="service-whatsapp-card__icon">
-                <span className="material-symbols-outlined">forum</span>
-              </div>
+              <p>{service.description}</p>
 
-              <h3>Consultas rápidas</h3>
-
-              <p>
-                ¿Tenés una pregunta sobre nuestros servicios? Escribinos por
-                WhatsApp y nuestro equipo te responderá con atención cercana.
-              </p>
-
-              <Button href="https://wa.me/" variant="secondary" target="_blank">
-                Escribir por WhatsApp
-              </Button>
+              <ul>
+                {service.items.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
             </article>
-          </div>
-        </section>
+          ))}
+        </div>
+      </section>
 
-        <section className="services-info-section">
-          <div className="services-info-section__content">
-            <span className="section-eyebrow">Cercanía y confianza</span>
+      <section className="insurance-section">
+        <div className="insurance-card">
+          <div>
+            <span className="section-kicker">Cobertura</span>
 
-            <h2>Una farmacia pensada para acompañarte</h2>
+            <h2>Obras sociales y prepagas</h2>
 
             <p>
-              Nuestro objetivo es que cada persona se sienta escuchada,
-              acompañada y bien orientada. Por eso mantenemos una atención
-              personalizada, ética y comprometida con el barrio.
+              Consultá por WhatsApp para confirmar si tu obra social o prepaga
+              se encuentra disponible, qué documentación necesitás presentar y
+              cómo realizar la atención correctamente.
+            </p>
+
+            <ul className="insurance-list">
+              {healthInsurances.map((insurance) => (
+                <li key={insurance}>{insurance}</li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="insurance-action">
+            <span className="material-symbols-outlined" aria-hidden="true">
+              health_and_safety
+            </span>
+
+            <h3>¿Querés consultar tu cobertura?</h3>
+
+            <p>
+              Escribinos y te orientamos según tu receta, obra social o prepaga.
+            </p>
+
+            <a
+              className="primary-button"
+              href={getWhatsappUrl()}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Consultar cobertura
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section className="services-note-section">
+        <div className="services-note">
+          <span className="material-symbols-outlined" aria-hidden="true">
+            info
+          </span>
+
+          <div>
+            <h2>Información importante</h2>
+
+            <p>
+              Algunos servicios pueden depender del horario, disponibilidad del
+              personal, documentación presentada o convenios vigentes. Ante
+              cualquier duda, recomendamos consultar previamente por WhatsApp.
             </p>
           </div>
-
-          <div className="services-info-section__list">
-            <div>
-              <span className="material-symbols-outlined">verified_user</span>
-              <p>Atención responsable y profesional</p>
-            </div>
-
-            <div>
-              <span className="material-symbols-outlined">diversity_3</span>
-              <p>Compromiso con la comunidad</p>
-            </div>
-
-            <div>
-              <span className="material-symbols-outlined">favorite</span>
-              <p>Trato humano y personalizado</p>
-            </div>
-          </div>
-        </section>
-      </main>
-
-
+        </div>
+      </section>
+    </main>
   );
-};
+}
 
 export default Services;
