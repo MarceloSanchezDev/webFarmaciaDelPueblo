@@ -1,41 +1,95 @@
 export const historyMilestones = [
   {
-    year: 'Origen',
-    title: 'Una farmacia cercana a la comunidad',
+    year: '1922',
+    title: 'Fundación de la farmacia',
     description:
-      'Farmacia Del Pueblo nace con el objetivo de brindar atención farmacéutica cercana, responsable y comprometida con las necesidades del barrio.',
+      'La farmacia fue fundada en el año 1922, en lo que hoy es Avenida Rosas 531, por el Sr. Lombardo, siendo originalmente inaugurada como una botica.',
+    details:
+      'Al ser idóneo de farmacia, no pudo obtener la habilitación formal en ese momento.',
   },
   {
-    year: 'Trayectoria',
-    title: 'Atención profesional y humana',
+    year: '1931',
+    title: 'Oficialización de la farmacia',
     description:
-      'A lo largo del tiempo, la farmacia consolidó una forma de atención basada en la confianza, la escucha y el asesoramiento personalizado.',
+      'Nueve años más tarde, la farmacia quedó oficializada en el mismo local.',
+    details:
+      'La farmacéutica Amanda Buffet fue la profesional a cargo de llevar adelante la farmacia. Años más tarde, el establecimiento se trasladó a Avenida Rosas 501.',
   },
   {
-    year: 'Actualidad',
-    title: 'Servicios para el cuidado diario',
+    year: '1957',
+    title: 'Llegada de la familia Berea',
     description:
-      'Hoy seguimos acompañando a la comunidad con medicamentos, obras sociales, perfumería, control de presión y consultas por WhatsApp.',
+      'En el año 1957 aparecen en escena el Sr. Edelmiro Berea y su hija Alina, recientemente recibida de farmacéutica en la Universidad del Litoral, en Rosario.',
+    details:
+      'La familia provenía de Alcorta, provincia de Santa Fe, ciudad reconocida por el histórico Grito de Alcorta. Compraron la farmacia y el 14 de febrero comenzaron a operar.',
+  },
+  {
+    year: 'Finales de los 60',
+    title: 'Crecimiento y asentamiento',
+    description:
+      'Luego de muchos esfuerzos, Edelmiro Berea compró un local con fondo en la dirección 521 de la misma Avenida Rosas.',
+    details:
+      'Allí comenzó la construcción del actual local y de la vivienda familiar.',
+  },
+  {
+    year: '1971',
+    title: 'Mudanza al local actual',
+    description:
+      'En el año 1971, la farmacia se mudó a su actual locación.',
+    details:
+      'Este nuevo espacio permitió consolidar el crecimiento de la farmacia y fortalecer su presencia en el barrio.',
+  },
+  {
+    year: '1982',
+    title: 'Continuidad de Alina Berea',
+    description:
+      'El abuelo Edelmiro falleció el 27 de septiembre de 1982, cediendo la responsabilidad de la farmacia a la Sra. Alina.',
+    details:
+      'Alina estuvo al frente durante varios años junto a su marido Roberto, sosteniendo la tradición familiar y profesional de la farmacia.',
+  },
+  {
+    year: '2006',
+    title: 'La tercera generación',
+    description:
+      'Luego de años de trabajo, Alina le dejó la posta a su único hijo, Pablo, alrededor del año 2006.',
+    details:
+      'A partir de allí también se sumó su esposa, María de los Ángeles, para continuar las labores de la farmacia.',
+  },
+  {
+    year: 'Pandemia',
+    title: 'Remodelación y nueva etapa',
+    description:
+      'Luego de afrontar la pandemia como cualquier otra farmacia, Farmacia Del Pueblo volvió a abrir sus puertas totalmente reformada.',
+    details:
+      'La remodelación marcó una nueva etapa para el establecimiento, manteniendo su identidad histórica y adaptándose a las necesidades actuales.',
+  },
+  {
+    year: '2022',
+    title: 'Cumplimiento de los 100 años',
+    description:
+      'En diciembre de 2022, el establecimiento cumplió un siglo en el barrio.',
+    details:
+      'Farmacia Del Pueblo no es una farmacia más: es historia viva del barrio. Una farmacia que vio crecer sus calles, su gente y a su propia descendencia.',
   },
 ];
 
 export const historyValues = [
   {
-    title: 'Confianza',
+    title: 'Historia barrial',
     description:
-      'Trabajamos para que cada persona reciba atención clara, responsable y cercana.',
-    icon: 'verified_user',
+      'Más de cien años acompañando la vida cotidiana del barrio y sus familias.',
+    icon: 'history_edu',
   },
   {
-    title: 'Compromiso',
+    title: 'Continuidad familiar',
     description:
-      'Acompañamos las necesidades de salud de la comunidad con presencia y responsabilidad.',
+      'Distintas generaciones sostuvieron el compromiso, la atención y la responsabilidad profesional.',
+    icon: 'diversity_3',
+  },
+  {
+    title: 'Cercanía',
+    description:
+      'Una farmacia construida desde la confianza, el trato humano y la presencia cotidiana.',
     icon: 'volunteer_activism',
-  },
-  {
-    title: 'Profesionalismo',
-    description:
-      'Brindamos orientación farmacéutica y derivación profesional cuando corresponde.',
-    icon: 'medical_services',
   },
 ];

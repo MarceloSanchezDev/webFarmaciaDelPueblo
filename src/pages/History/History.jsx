@@ -9,12 +9,12 @@ function History() {
         <div className="history-hero__content">
           <span className="section-kicker">Nuestra historia</span>
 
-          <h1>Una farmacia cercana, profesional y comprometida con su comunidad</h1>
+          <h1>Más de 100 años siendo parte de la vida del barrio</h1>
 
           <p>
-            {pharmacyContact.name} acompaña a sus clientes con atención humana,
-            asesoramiento responsable y servicios pensados para el cuidado
-            cotidiano de la salud.
+            {pharmacyContact.name} no es solo una farmacia. Es una historia
+            familiar, profesional y barrial que comenzó en 1922 y continúa hasta
+            hoy acompañando a distintas generaciones.
           </p>
 
           <div className="history-hero__actions">
@@ -39,27 +39,37 @@ function History() {
           <div>
             <span className="section-kicker">Identidad</span>
 
-            <h2>Atención de farmacia con sentido de cercanía</h2>
+            <h2>Una farmacia con memoria, oficio y continuidad familiar</h2>
           </div>
 
           <p>
-            En una farmacia, la experiencia del cliente no termina en la compra
-            de un producto. También importa la orientación, la claridad, la
-            disponibilidad y la confianza para hacer una consulta cuando se
-            necesita.
+            Desde sus primeros años como botica hasta su consolidación como
+            farmacia de referencia, Farmacia Del Pueblo atravesó cambios,
+            mudanzas, generaciones y nuevas etapas, manteniendo siempre su
+            vínculo con la comunidad.
           </p>
         </div>
       </section>
 
       <section className="history-timeline-section">
+        <div className="history-section-header">
+          <span className="section-kicker">Línea de tiempo</span>
+          <h2>Los momentos que construyeron nuestra historia</h2>
+        </div>
+
         <div className="history-timeline">
           {historyMilestones.map((item) => (
-            <article className="history-timeline__item" key={item.title}>
-              <span>{item.year}</span>
+            <article className="history-timeline__item" key={`${item.year}-${item.title}`}>
+              <div className="history-timeline__marker">
+                <span>{item.year}</span>
+              </div>
 
-              <div>
-                <h2>{item.title}</h2>
+              <div className="history-timeline__content">
+                <h3>{item.title}</h3>
+
                 <p>{item.description}</p>
+
+                {item.details && <p>{item.details}</p>}
               </div>
             </article>
           ))}
@@ -67,9 +77,9 @@ function History() {
       </section>
 
       <section className="history-values-section">
-        <div className="history-values-header">
+        <div className="history-section-header">
           <span className="section-kicker">Valores</span>
-          <h2>Lo que guía nuestra atención</h2>
+          <h2>Lo que representa Farmacia Del Pueblo</h2>
         </div>
 
         <div className="history-values-grid">
@@ -89,13 +99,13 @@ function History() {
       <section className="history-cta-section">
         <div className="history-cta">
           <div>
-            <span className="section-kicker">Contacto</span>
+            <span className="section-kicker">Presente</span>
 
-            <h2>¿Necesitás hacer una consulta?</h2>
+            <h2>Una farmacia histórica, activa y cercana</h2>
 
             <p>
-              Escribinos por WhatsApp para consultar disponibilidad, horarios,
-              servicios u obras sociales.
+              Hoy seguimos acompañando al barrio con atención farmacéutica,
+              servicios, asesoramiento y canales de consulta directa.
             </p>
           </div>
 
