@@ -8,6 +8,7 @@ import {
   getWhatsappUrl,
   pharmacyContact,
 } from '../../data/contactData';
+import logo from "../../assets/logot.png";
 import './Home.css';
 const trustItems = [
   {
@@ -91,7 +92,7 @@ const Home = () => {
 
           <div className="hero__content">
             <span className="hero__badge">
-              <span className="material-symbols-outlined">local_pharmacy</span>
+              <img className="logospan" src={logo} alt="Logo de Farmacia Del Pueblo" />
               Desde 1924
             </span>
 

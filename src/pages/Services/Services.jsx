@@ -61,19 +61,27 @@ function Services() {
           <div>
             <span className="section-kicker">Cobertura</span>
 
-            <h2>Obras sociales y prepagas</h2>
+            <h2>Obras sociales y coberturas</h2>
 
             <p>
-              Consultá por WhatsApp para confirmar si tu obra social o prepaga
-              se encuentra disponible, qué documentación necesitás presentar y
-              cómo realizar la atención correctamente.
+              Trabajamos con distintas obras sociales, planes y coberturas. Te
+              recomendamos consultar previamente por WhatsApp para confirmar
+              documentación, receta, cobertura vigente y disponibilidad.
             </p>
 
-            <ul className="insurance-list">
-              {healthInsurances.map((insurance) => (
-                <li key={insurance}>{insurance}</li>
+            <div className="insurance-groups">
+              {healthInsurances.map((insuranceGroup) => (
+                <article className="insurance-group" key={insuranceGroup.group}>
+                  <h3>{insuranceGroup.group}</h3>
+
+                  <ul className="insurance-list">
+                    {insuranceGroup.items.map((insurance) => (
+                      <li key={insurance}>{insurance}</li>
+                    ))}
+                  </ul>
+                </article>
               ))}
-            </ul>
+            </div>
           </div>
 
           <div className="insurance-action">
@@ -84,7 +92,7 @@ function Services() {
             <h3>¿Querés consultar tu cobertura?</h3>
 
             <p>
-              Escribinos y te orientamos según tu receta, obra social o prepaga.
+              Escribinos y te orientamos según tu receta, obra social o plan.
             </p>
 
             <a

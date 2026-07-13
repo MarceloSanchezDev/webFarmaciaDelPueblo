@@ -1,30 +1,30 @@
 export const pharmacyContact = {
   name: 'Farmacia Del Pueblo',
-  address: 'Agregar dirección real',
-  city: 'Agregar barrio o ciudad',
+  address: 'Av. Brig. Gral. Juan Manuel de Rosas 523',
+  city: 'Lomas del Mirador, Cdad. Autónoma de Buenos Aires',
   province: 'Buenos Aires',
   country: 'Argentina',
 
-  phone: '+54 000 0000-0000',
-  whatsappNumber: '5490000000000',
+  phone: '+54 1146990180',
+  whatsappNumber: '5491146990180',
   whatsappMessage: 'Hola Farmacia Del Pueblo, quiero hacer una consulta.',
 
   email: '',
   instagramUrl: '',
-  mapsUrl: 'https://maps.google.com/',
+  mapsUrl: 'https://www.google.com/maps/place/Farmacia+del+Pueblo/@-34.6647452,-58.5251617,17z/data=!3m1!4b1!4m6!3m5!1s0x95bcc8f168665cdf:0x356d8487ab220e6a!8m2!3d-34.6647452!4d-58.5251617!16s%2Fg%2F1tdvqy97!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MDcwOC4wIKXMDSoASAFQAw%3D%3D',
 
   openingHours: [
     {
       day: 'Lunes a viernes',
-      hours: '08:00 a 20:00',
+      hours: '09:00 a 13:00 16:30 a 21:00',
     },
     {
       day: 'Sábados',
-      hours: '09:00 a 18:00',
+      hours: '09:00 a 13:00',
     },
     {
-      day: 'Domingos y feriados',
-      hours: 'Consultar guardia',
+      day: 'Domingos',
+      hours: 'Cerrado',
     },
   ],
 

@@ -2,80 +2,155 @@ export const pharmacyServices = [
   {
     title: 'Medicamentos',
     description:
-      'Venta de medicamentos, asesoramiento sobre indicaciones y orientación para el uso responsable.',
+      'Venta de medicamentos recetados y de venta libre, con orientación farmacéutica responsable.',
     icon: 'medication',
     items: [
       'Medicamentos recetados',
       'Medicamentos de venta libre',
-      'Consultas sobre disponibilidad',
-      'Orientación farmacéutica',
+      'Consulta de disponibilidad',
+      'Asesoramiento farmacéutico',
+    ],
+  },
+  {
+    title: 'Artículos de ortopedia',
+    description:
+      'Productos de apoyo para movilidad, recuperación, cuidado físico y necesidades ortopédicas.',
+    icon: 'accessibility_new',
+    items: [
+      'Accesorios ortopédicos',
+      'Productos de apoyo',
+      'Consulta de disponibilidad',
+      'Asesoramiento según necesidad',
+    ],
+  },
+  {
+    title: 'Perfumería',
+    description:
+      'Productos de perfumería, higiene personal y cuidado diario para toda la familia.',
+    icon: 'spa',
+    items: [
+      'Higiene personal',
+      'Cuidado corporal',
+      'Productos para el cuidado diario',
+      'Artículos de uso familiar',
+    ],
+  },
+  {
+    title: 'Accesorios',
+    description:
+      'Accesorios vinculados al cuidado personal, salud, bienestar y uso cotidiano.',
+    icon: 'shopping_bag',
+    items: [
+      'Accesorios de farmacia',
+      'Productos complementarios',
+      'Artículos de uso diario',
+      'Consulta por disponibilidad',
+    ],
+  },
+  {
+    title: 'Dermocosmética',
+    description:
+      'Productos para el cuidado de la piel, rutinas dermatológicas y cuidado facial o corporal.',
+    icon: 'face',
+    items: [
+      'Cuidado de la piel',
+      'Cuidado facial',
+      'Cuidado corporal',
+      'Consulta por productos disponibles',
+    ],
+  },
+  {
+    title: 'Artículos hospitalarios',
+    description:
+      'Artículos orientados al cuidado domiciliario, curaciones, higiene y necesidades hospitalarias.',
+    icon: 'medical_services',
+    items: [
+      'Productos para curaciones',
+      'Cuidado domiciliario',
+      'Elementos hospitalarios',
+      'Consulta por stock disponible',
+    ],
+  },
+  {
+    title: 'Herboristería',
+    description:
+      'Productos de herboristería y alternativas naturales disponibles según stock.',
+    icon: 'local_florist',
+    items: [
+      'Productos naturales',
+      'Hierbas e infusiones',
+      'Complementos de cuidado',
+      'Consulta por disponibilidad',
     ],
   },
   {
     title: 'Obras sociales',
     description:
-      'Atención con obras sociales y prepagas según disponibilidad y convenios vigentes.',
+      'Atención con distintas obras sociales, planes y coberturas según convenio vigente.',
     icon: 'health_and_safety',
     items: [
-      'Consulta de cobertura',
-      'Validación de recetas',
-      'Atención con documentación correspondiente',
-      'Derivación de consultas por WhatsApp',
-    ],
-  },
-  {
-    title: 'Perfumería y cuidado personal',
-    description:
-      'Productos de higiene, cuidado personal, dermocosmética y artículos de uso diario.',
-    icon: 'spa',
-    items: [
-      'Higiene personal',
-      'Cuidado de la piel',
-      'Productos para bebés',
-      'Artículos de perfumería',
-    ],
-  },
-  {
-    title: 'Control de presión',
-    description:
-      'Servicio de control de presión arterial sujeto a disponibilidad del personal y horario de atención.',
-    icon: 'monitor_heart',
-    items: [
-      'Control presencial',
-      'Registro orientativo',
-      'Recomendación de consulta médica si corresponde',
-      'Atención cercana y profesional',
-    ],
-  },
-  {
-    title: 'Asesoramiento farmacéutico',
-    description:
-      'Acompañamiento profesional para resolver dudas sobre medicamentos, tratamientos y cuidados generales.',
-    icon: 'support_agent',
-    items: [
-      'Consultas sobre medicamentos',
-      'Modo de uso',
-      'Precauciones generales',
-      'Derivación médica cuando sea necesario',
-    ],
-  },
-  {
-    title: 'Pedidos y consultas por WhatsApp',
-    description:
-      'Canal rápido para consultar disponibilidad, horarios, servicios y orientación general.',
-    icon: 'chat',
-    items: [
-      'Consulta de productos',
-      'Información sobre horarios',
-      'Preguntas sobre servicios',
-      'Atención rápida desde el celular',
+      'PAMI',
+      'IOMA',
+      'Planes especiales',
+      'Consulta de cobertura por WhatsApp',
     ],
   },
 ];
 
+export const productCategories = [
+  'Medicamentos',
+  'Artículos de ortopedia',
+  'Perfumería',
+  'Accesorios',
+  'Dermocosmética',
+  'Artículos hospitalarios',
+  'Herboristería',
+];
+
 export const healthInsurances = [
-  'Consultar obras sociales disponibles',
-  'PAMI',
-  'IOMA',
-  'Prepagas y coberturas según convenio',
+  {
+    group: 'PAMI',
+    items: [
+      'PAMI',
+      'PAMI 100%',
+      'PAMI Diabetes',
+      'PAMI Tratamientos Especiales',
+      'PAMI Oncología',
+    ],
+  },
+  {
+    group: 'IOMA',
+    items: [
+      'IOMA',
+      'IOMA Mayor Cobertura',
+      'IOMA Accesorios',
+      'IOMA MEPPES',
+    ],
+  },
+  {
+    group: 'Obras sociales y convenios',
+    items: [
+      'Policía Federal Argentina',
+      'Poder Judicial',
+      'COMEI',
+      'Unión Personal',
+      'SUTEBA',
+      'UDOCBA',
+      'UPCN',
+      'Federación Patronal ART',
+      'Recetario Solidario',
+      'Bonos PAP',
+      'TARMED Hominis',
+      'Sanidad',
+      'Sancor Avalian',
+      'Banco Provincia',
+      'Comisarios Navales',
+      'Prevención Salud',
+      'Prevención ART',
+      'Caja de Escribanos',
+      'Caja de Abogados',
+      'OSDEPYM',
+      'OSPEDYC',
+    ],
+  },
 ];

@@ -85,7 +85,10 @@ body {
   font-size: 0.9rem;
   font-weight: 600;
 }
-
+.logospan{
+  width: 64px;
+  height: 64px;
+}
 .hero h1 {
   margin: 0;
   font-family: var(--font-title);
