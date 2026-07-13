@@ -42,9 +42,6 @@
 
   display: grid;
   place-items: center;
-
-  background-color: #d9f0e1;
-  color: #196f3d;
   font-size: 1.4rem;
   font-weight: 800;
 }
@@ -133,6 +130,36 @@
   font-size: 2rem;
 }
 
+.navbar__brand-title {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  overflow: hidden;
+
+  min-width: 190px;
+  min-height: 28px;
+}
+
+.navbar__brand-title-text {
+  display: inline-block;
+
+  animation: navbarTitleFadeIn 0.28s ease both;
+}
+
+@keyframes navbarTitleFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+    filter: blur(4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
 @media (max-width: 860px) {
   .navbar {
     min-height: 72px;
@@ -191,5 +218,15 @@
   .navbar__logo {
     width: 38px;
     height: 38px;
+  }
+}
+
+@media (max-width: 520px) {
+  .navbar__brand-title {
+    min-width: 140px;
+  }
+
+  .navbar__brand-title-text {
+    font-size: 0.95rem;
   }
 }
