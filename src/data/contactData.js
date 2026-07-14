@@ -11,7 +11,7 @@ export const pharmacyContact = {
 
   email: '',
   instagramUrl: '',
-  mapsUrl: 'https://www.google.com/maps/place/Farmacia+del+Pueblo/@-34.6647452,-58.5251617,17z/data=!3m1!4b1!4m6!3m5!1s0x95bcc8f168665cdf:0x356d8487ab220e6a!8m2!3d-34.6647452!4d-58.5251617!16s%2Fg%2F1tdvqy97!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MDcwOC4wIKXMDSoASAFQAw%3D%3D',
+  mapsUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.6023081885623!2d-58.5251617!3d-34.6647452!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc8f168665cdf%3A0x356d8487ab220e6a!2sFarmacia%20del%20Pueblo!5e0!3m2!1ses!2sar!4v1784046157971!5m2!1ses!2sar',
 
   openingHours: [
     {
@@ -55,3 +55,4 @@ export const pharmacySeo = {
     'Farmacia Del Pueblo ofrece atención farmacéutica, medicamentos, perfumería, obras sociales, control de presión y asesoramiento profesional.',
   image: '/og-image.jpg',
 };
+

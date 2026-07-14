@@ -120,25 +120,32 @@ function Contact() {
         <div className="contact-map-card">
           <div>
             <span className="section-kicker">Ubicación</span>
+
             <h2>Encontranos fácilmente</h2>
+
             <p>
               Usá el mapa para llegar a la farmacia o escribinos por WhatsApp
               para confirmar horarios y atención disponible.
             </p>
-          </div>
 
-          <div className="contact-map-placeholder">
-            <span className="material-symbols-outlined" aria-hidden="true">
-              map
-            </span>
-            <p>Mapa de ubicación</p>
             <a
+              className="secondary-button"
               href={pharmacyContact.mapsUrl}
               target="_blank"
               rel="noreferrer"
             >
-              Ver ubicación
+              Abrir en Google Maps
             </a>
+          </div>
+
+          <div className="contact-map-embed">
+            <iframe
+              title={`Ubicación de ${pharmacyContact.name}`}
+              src={pharmacyContact.mapsUrl}
+              loading="lazy"
+              allowFullScreen
+              referrerPolicy="no-referrer-when-downgrade"
+            />
           </div>
         </div>
       </section>

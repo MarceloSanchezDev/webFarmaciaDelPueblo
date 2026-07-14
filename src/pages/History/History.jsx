@@ -7,28 +7,28 @@ function History() {
   return (
     <main className="history-page">
       <section className="history-tribute-section">
-  <div className="history-tribute">
-    <div className="history-tribute__content">
-      <span className="section-kicker">Homenaje</span>
+        <div className="history-tribute">
+          <div className="history-tribute__content">
+            <span className="section-kicker">Homenaje</span>
 
-      <h2>Siempre presente en nuestra historia</h2>
+            <h2>Siempre presente en nuestra historia</h2>
 
-      <blockquote>
-        “En honor a nuestra querida mamá, abuela y eterna farmacéutica, Alina.
-        Su dedicación, cariño y manera de cuidar a cada persona que entraba a
-        la farmacia siguen presentes en todo lo que hacemos. Siempre presente
-        en nuestra memoria y en el camino que continuamos.”
-      </blockquote>
-    </div>
+            <blockquote>
+              “En honor a nuestra querida mamá, abuela y eterna farmacéutica, Alina.
+              Su dedicación, cariño y manera de cuidar a cada persona que entraba a
+              la farmacia siguen presentes en todo lo que hacemos. Siempre presente
+              en nuestra memoria y en el camino que continuamos.”
+            </blockquote>
+          </div>
 
-    <div className="history-tribute__image">
-      <img
-        src={alisa}
-        alt="Homenaje a Alina, farmacéutica de Farmacia Del Pueblo"
-      />
-    </div>
-  </div>
-</section>
+          <div className="history-tribute__image">
+            <img
+              src={alisa}
+              alt="Homenaje a Alina, farmacéutica de Farmacia Del Pueblo"
+            />
+          </div>
+        </div>
+      </section>
       <section className="history-hero">
         <div className="history-hero__content">
           <span className="section-kicker">Nuestra historia</span>
@@ -83,7 +83,10 @@ function History() {
 
         <div className="history-timeline">
           {historyMilestones.map((item) => (
-            <article className="history-timeline__item" key={`${item.year}-${item.title}`}>
+            <article
+              className="history-timeline__item"
+              key={`${item.year}-${item.title}`}
+            >
               <div className="history-timeline__marker">
                 <span>{item.year}</span>
               </div>
@@ -92,6 +95,16 @@ function History() {
                 <h3>{item.title}</h3>
 
                 <p>{item.description}</p>
+
+                {item.image && (
+                  <figure className="history-timeline__figure">
+                    <img
+                      src={item.image}
+                      alt={item.imageAlt || item.title}
+                      loading="lazy"
+                    />
+                  </figure>
+                )}
 
                 {item.details && <p>{item.details}</p>}
               </div>

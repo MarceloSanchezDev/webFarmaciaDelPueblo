@@ -311,6 +311,8 @@
   max-height: 520px;
   object-fit: cover;
 }
+
+
 @media (max-width: 900px) {
   .history-intro__content,
   .history-values-grid,
@@ -370,5 +372,10 @@
 
   .history-tribute__content blockquote {
     padding-left: 18px;
+  }
+}
+@media (max-width: 620px) {
+  .history-timeline__figure img {
+    max-height: 260px;
   }
 }
