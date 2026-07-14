@@ -7,10 +7,12 @@ import History from './pages/History/History';
 import Services from './pages/Services/Services';
 import Contact from './pages/Contact/Contact';
 import Community from './pages/Community/Community';
+import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 
 function App() {
   return (
     <>
+      <ScrollToTop />
       <Navbar />
 
       <main>
