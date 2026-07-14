@@ -8,6 +8,7 @@ import Services from './pages/Services/Services';
 import Contact from './pages/Contact/Contact';
 import Community from './pages/Community/Community';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
+import NotFound from './pages/NotFound/NotFound';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/servicios" element={<Services />} />
           <Route path="/contacto" element={<Contact />} />
           <Route path="/comunidad" element={<Community />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
 
