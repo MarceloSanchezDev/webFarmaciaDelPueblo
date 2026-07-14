@@ -3,6 +3,7 @@ import {
   getWhatsappUrl,
   pharmacyContact,
 } from '../../data/contactData';
+import logo from '../../assets/logo.png';
 import './NotFound.css';
 
 function NotFound() {
@@ -43,9 +44,7 @@ function NotFound() {
         </div>
 
         <div className="not-found__visual" aria-hidden="true">
-          <span className="material-symbols-outlined">
-            local_pharmacy
-          </span>
+          <img className='img' src={logo} alt={pharmacyContact.name} />
         </div>
       </section>
     </main>

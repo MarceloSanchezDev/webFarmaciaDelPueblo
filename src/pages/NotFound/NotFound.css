@@ -87,6 +87,19 @@
   font-size: 4.8rem;
 }
 
+.img{
+    width: 132px;
+    height: 132px;
+    
+    display: grid;
+    place-items: center;
+    
+    border-radius: 50%;
+    background-color: #e4f5ea;
+    color: #196f3d;
+    font-size: 4.8rem;
+}
+
 @media (max-width: 900px) {
   .not-found {
     grid-template-columns: 1fr;
