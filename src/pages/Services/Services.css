@@ -19,7 +19,7 @@
 .services-hero h1 {
   margin: 0;
   color: #123722;
-  font-family: 'Source Serif 4', serif;
+  font-family: var(--font-title);
   font-size: clamp(2.3rem, 6vw, 4.6rem);
   line-height: 0.98;
 }
@@ -129,7 +129,7 @@
 
 .insurance-card h2 {
   margin: 0;
-  font-family: 'Source Serif 4', serif;
+  font-family: var(--font-title);
   font-size: clamp(2rem, 4vw, 3.4rem);
   line-height: 1;
 }

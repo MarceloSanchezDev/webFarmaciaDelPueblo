@@ -8,7 +8,6 @@ import './NavBar.css';
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
- const [title, setTitle] = useState(false);
   const handleCloseMenu = () => {
     setIsMenuOpen(false);
   };
@@ -23,16 +22,9 @@ return (
           alt={pharmacyContact.name}
         />
 
-        <span
-          className="navbar__brand-title"
-          onMouseEnter={() => setTitle(false)}
-          onMouseLeave={() => setTitle(true)}
-        >
-          <span
-            key={title ? 'pharmacy-name' : 'pharmacy-year'}
-            className="navbar__brand-title-text"
-          >
-            {title ? pharmacyContact.name : 'Desde 1924'}
+        <span className="navbar__brand-title">
+          <span className="navbar__brand-title-text">
+            {pharmacyContact.name}
           </span>
         </span>
       </Link>
@@ -42,6 +34,7 @@ return (
         className="navbar__toggle"
         aria-label={isMenuOpen ? 'Cerrar menú' : 'Abrir menú'}
         aria-expanded={isMenuOpen}
+        aria-controls="primary-navigation"
         onClick={() => setIsMenuOpen((currentValue) => !currentValue)}
       >
         <span className="material-symbols-outlined" aria-hidden="true">
@@ -49,7 +42,10 @@ return (
         </span>
       </button>
 
-      <div className={`navbar__menu ${isMenuOpen ? 'navbar__menu--open' : ''}`}>
+      <div
+        className={`navbar__menu ${isMenuOpen ? 'navbar__menu--open' : ''}`}
+        id="primary-navigation"
+      >
         <div className="navbar__links">
           {navigationLinks.map((link) => (
             <NavLink

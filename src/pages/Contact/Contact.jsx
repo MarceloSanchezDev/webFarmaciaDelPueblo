@@ -1,5 +1,6 @@
 import {
   getFullAddress,
+  getMapsUrl,
   getWhatsappUrl,
   pharmacyContact,
 } from '../../data/contactData';
@@ -31,7 +32,7 @@ function Contact() {
 
             <a
               className="secondary-button"
-              href={pharmacyContact.mapsUrl}
+              href={getMapsUrl()}
               target="_blank"
               rel="noreferrer"
             >
@@ -52,7 +53,7 @@ function Contact() {
             <p>{getFullAddress()}</p>
 
             <a
-              href={pharmacyContact.mapsUrl}
+              href={getMapsUrl()}
               target="_blank"
               rel="noreferrer"
             >
@@ -130,7 +131,7 @@ function Contact() {
 
             <a
               className="secondary-button"
-              href={pharmacyContact.mapsUrl}
+              href={getMapsUrl()}
               target="_blank"
               rel="noreferrer"
             >
@@ -141,7 +142,7 @@ function Contact() {
           <div className="contact-map-embed">
             <iframe
               title={`Ubicación de ${pharmacyContact.name}`}
-              src={pharmacyContact.mapsUrl}
+              src={pharmacyContact.mapsEmbedUrl}
               loading="lazy"
               allowFullScreen
               referrerPolicy="no-referrer-when-downgrade"

@@ -1,12 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&family=Material+Symbols+Outlined&family=Source+Sans+3:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --color-primary: #196f3d;
+  --color-primary-dark: #123722;
+  --color-secondary: #248b4c;
+  --color-white: #ffffff;
+  --color-text: #17241c;
+  --color-muted: #526158;
+  --color-soft-green: #e4f5ea;
+  --color-soft-bg: #f7fbf8;
+  --color-border: #d8e3d9;
+  --font-title: 'Lora', Georgia, serif;
+  --font-body: 'Source Sans 3', system-ui, sans-serif;
+  --container: 1180px;
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-lg: 32px;
+  --shadow: 0 18px 45px rgba(31, 93, 51, 0.08);
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
 body {
+  min-width: 320px;
   margin: 0;
+  color: var(--color-text);
+  background: var(--color-white);
+  font-family: var(--font-body);
+  line-height: 1.5;
+}
+
+img { max-width: 100%; }
+
+button,
+a { -webkit-tap-highlight-color: transparent; }
+
+a:focus-visible,
+button:focus-visible,
+iframe:focus-visible {
+  outline: 3px solid #f2b84b;
+  outline-offset: 3px;
 }
 
 .section-kicker {
   display: inline-flex;
   margin-bottom: 14px;
-
-  color: #196f3d;
+  color: var(--color-primary);
   font-size: 0.78rem;
   font-weight: 800;
   letter-spacing: 0.16em;
@@ -18,50 +59,21 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
   min-height: 48px;
   padding: 0 22px;
+  border: 1px solid transparent;
   border-radius: 999px;
-
   font-weight: 800;
   text-decoration: none;
-  cursor: pointer;
-  transition:
-    background-color 0.2s ease,
-    border-color 0.2s ease,
-    color 0.2s ease,
-    transform 0.2s ease;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
 
-.primary-button {
-  border: 1px solid #196f3d;
-  background-color: #196f3d;
-  color: #ffffff;
-  box-shadow: 0 16px 30px rgba(25, 111, 61, 0.2);
-}
-
-.primary-button:hover {
-  background-color: #0f4f2a;
-  border-color: #0f4f2a;
-  color: #ffffff;
-  transform: translateY(-1px);
-}
-
-.secondary-button {
-  border: 1px solid #b8d4c1;
-  background-color: #ffffff;
-  color: #196f3d;
-}
-
-.secondary-button:hover {
-  border-color: #196f3d;
-  color: #0f4f2a;
-  transform: translateY(-1px);
-}
+.primary-button { background: var(--color-primary); border-color: var(--color-primary); color: var(--color-white); box-shadow: 0 16px 30px rgba(25, 111, 61, 0.2); }
+.primary-button:hover { background: var(--color-primary-dark); border-color: var(--color-primary-dark); color: var(--color-white); transform: translateY(-1px); }
+.secondary-button { background: var(--color-white); border-color: #b8d4c1; color: var(--color-primary); }
+.secondary-button:hover { border-color: var(--color-primary); color: var(--color-primary-dark); transform: translateY(-1px); }
 
 @media (max-width: 620px) {
   .primary-button,
-  .secondary-button {
-    width: 100%;
-  }
+  .secondary-button { width: 100%; }
 }

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import {
   getFullAddress,
   getWhatsappUrl,
@@ -23,9 +24,9 @@ function Footer() {
 
           <nav className="footer-links" aria-label="Navegación secundaria">
             {navigationLinks.map((link) => (
-              <a key={link.path} href={link.path}>
+              <Link key={link.path} to={link.path}>
                 {link.label}
-              </a>
+              </Link>
             ))}
           </nav>
         </section>

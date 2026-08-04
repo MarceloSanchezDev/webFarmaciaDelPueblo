@@ -19,7 +19,7 @@
 .history-hero h1 {
   margin: 0;
   color: #123722;
-  font-family: 'Source Serif 4', serif;
+  font-family: var(--font-title);
   font-size: clamp(2.3rem, 6vw, 4.6rem);
   line-height: 0.98;
 }
@@ -59,7 +59,7 @@
 .history-cta h2 {
   margin: 0;
   color: #123722;
-  font-family: 'Source Serif 4', serif;
+  font-family: var(--font-title);
   font-size: clamp(2rem, 4vw, 3.4rem);
   line-height: 1;
 }
@@ -276,7 +276,7 @@
 .history-tribute__content h2 {
   margin: 0;
   color: #ffffff;
-  font-family: 'Source Serif 4', serif;
+  font-family: var(--font-title);
   font-size: clamp(2rem, 4vw, 3.4rem);
   line-height: 1;
 }
@@ -293,7 +293,7 @@
   border-left: 3px solid #a8e6bd;
 
   color: rgba(255, 255, 255, 0.84);
-  font-family: 'Source Serif 4', serif;
+  font-family: var(--font-title);
   font-size: clamp(1.15rem, 2vw, 1.45rem);
   line-height: 1.8;
 }

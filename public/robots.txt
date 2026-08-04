@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://web-farmacia-del-pueblo.vercel.app/sitemap.xml

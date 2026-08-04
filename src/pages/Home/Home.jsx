@@ -1,15 +1,15 @@
-import "./Home.css";
-import Button from "../../components/UI/Buttons/Buttons";
-import SectionHeader from "../../components/UI/SectionHeader/SectionHeader";
-import InfoCard from "../../components/UI/InfoCard/InfoCard";
-import ServiceCard from "../../components/UI/ServiceCard/ServiceCard";
+import './Home.css';
+import Button from '../../components/UI/Buttons/Buttons';
+import SectionHeader from '../../components/UI/SectionHeader/SectionHeader';
+import InfoCard from '../../components/UI/InfoCard/InfoCard';
+import ServiceCard from '../../components/UI/ServiceCard/ServiceCard';
 import {
   getFullAddress,
+  getMapsUrl,
   getWhatsappUrl,
   pharmacyContact,
 } from '../../data/contactData';
-import logo from "../../assets/logot.png";
-import './Home.css';
+import logo from '../../assets/logot.png';
 const trustItems = [
   {
     icon: "history_edu",
@@ -93,7 +93,7 @@ const Home = () => {
           <div className="hero__content">
             <span className="hero__badge">
               <img className="logospan" src={logo} alt="Logo de Farmacia Del Pueblo" />
-              Desde 1924
+              Desde 1922
             </span>
 
             <h1>Más de un siglo brindando atención cercana y de calidad</h1>
@@ -105,14 +105,25 @@ const Home = () => {
             </p>
 
             <div className="hero__actions">
-              <Button href="#origen">Conocé nuestra historia</Button>
-              <Button href="#ubicacion" variant="secondary">
+              <Button href="/servicios">Ver servicios</Button>
+              <Button href={getMapsUrl()} variant="secondary" target="_blank">
                 Cómo llegar
               </Button>
-              <Button href="#contacto" variant="outline">
+              <Button href={getWhatsappUrl()} variant="outline" target="_blank">
                 Contactanos
               </Button>
             </div>
+
+            <ul className="hero__details" aria-label="Información rápida">
+              <li>
+                <span className="material-symbols-outlined" aria-hidden="true">location_on</span>
+                {getFullAddress()}
+              </li>
+              <li>
+                <span className="material-symbols-outlined" aria-hidden="true">schedule</span>
+                Lun. a vie. 09:00–13:00 y 16:30–21:00
+              </li>
+            </ul>
           </div>
         </section>
 
@@ -157,7 +168,7 @@ const Home = () => {
           <div className="origin-section__image">
             <div className="origin-section__image-card">
               <span className="material-symbols-outlined">history_edu</span>
-              <strong>Est. 1924</strong>
+              <strong>Desde 1922</strong>
               <p>Historia, barrio y comunidad.</p>
             </div>
           </div>
@@ -193,10 +204,10 @@ const Home = () => {
             </p>
 
             <div className="location-section__actions">
-              <Button href="https://maps.google.com" target="_blank">
+              <Button href={getMapsUrl()} target="_blank">
                 Ver en Google Maps
               </Button>
-              <Button href="https://wa.me/" variant="secondary" target="_blank">
+              <Button href={getWhatsappUrl()} variant="secondary" target="_blank">
                 Escribir por WhatsApp
               </Button>
             </div>
@@ -205,7 +216,7 @@ const Home = () => {
           <div className="home-location__map-embed">
   <iframe
     title={`Ubicación de ${pharmacyContact.name}`}
-    src={pharmacyContact.mapsUrl}
+    src={pharmacyContact.mapsEmbedUrl}
     loading="lazy"
     allowFullScreen
     referrerPolicy="no-referrer-when-downgrade"
