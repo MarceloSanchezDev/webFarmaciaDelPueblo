@@ -92,7 +92,6 @@ export const pharmacyServices = [
       'PAMI',
       'IOMA',
       'Planes especiales',
-      'Consulta de cobertura por WhatsApp',
     ],
   },
 ];

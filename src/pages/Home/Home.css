@@ -12,7 +12,9 @@
   align-items: center;
   justify-content: center;
   padding: 120px 24px;
-  background: linear-gradient(135deg, rgba(18, 55, 34, 0.98), rgba(25, 111, 61, 0.92));
+  background:
+    linear-gradient(135deg, rgba(18, 55, 34, 0.9), rgba(25, 111, 61, 0.78)),
+    url('../../assets/farmaciaFondo.jpeg') center / cover no-repeat;
   background-size: cover;
   background-position: center;
 }
@@ -155,9 +157,9 @@
 .origin-section__image {
   min-height: 420px;
   border-radius: var(--radius-lg);
-  background: linear-gradient(145deg, #c8ead3, #8fc9a3);
-  background-size: cover;
-  background-position: center;
+  background:
+    linear-gradient(rgba(18, 55, 34, 0.2), rgba(18, 55, 34, 0.38)),
+    url('../../assets/farmaciaFondo.jpeg') center / cover no-repeat;
   display: flex;
   align-items: flex-end;
   padding: 28px;
@@ -165,8 +167,8 @@
 }
 
 .origin-section__image-card {
-  width: 100%;
-  padding: 28px;
+  width: min(100%, 280px);
+  padding: 20px;
   border-radius: var(--radius-md);
   background-color: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(10px);
@@ -174,19 +176,20 @@
 }
 
 .origin-section__image-card span {
-  font-size: 42px;
+  font-size: 32px;
 }
 
 .origin-section__image-card strong {
   display: block;
-  margin-top: 8px;
+  margin-top: 6px;
   font-family: var(--font-title);
-  font-size: 2rem;
+  font-size: 1.45rem;
 }
 
 .origin-section__image-card p {
-  margin: 6px 0 0;
+  margin: 4px 0 0;
   color: var(--color-muted);
+  font-size: 0.9rem;
 }
 
 /* LOCATION */
@@ -269,10 +272,11 @@
 }
 
 .community-card__image {
+  display: block;
+  width: 100%;
   height: 220px;
-  background: linear-gradient(135deg, #dff3e6, #a7dcb7);
-  background-size: cover;
-  background-position: center;
+  object-fit: cover;
+  object-position: center;
 }
 
 .community-card__content {

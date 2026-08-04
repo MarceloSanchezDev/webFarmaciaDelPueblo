@@ -1,5 +1,8 @@
 import { getWhatsappUrl, pharmacyContact } from '../../data/contactData';
 import { communityActions, communityTips } from '../../data/communityData';
+import historicPharmacy from '../../assets/cero.jpeg';
+import pharmacyTeam from '../../assets/primer.jpeg';
+import neighborhoodCare from '../../assets/segunda.jpeg';
 import './Community.css';
 
 function Community() {
@@ -51,6 +54,36 @@ function Community() {
               <p>{item.description}</p>
             </article>
           ))}
+        </div>
+      </section>
+
+      <section className="centennial-draw-section">
+        <div className="centennial-draw">
+          <div className="centennial-draw__content">
+            <span className="section-kicker">100 años</span>
+            <h2>Sorteo por los 100 años</h2>
+            <p>
+              Celebramos un siglo junto al barrio y a las familias que nos
+              acompañaron durante generaciones. Este sorteo fue una forma de
+              agradecer la confianza de nuestra comunidad y compartir este
+              momento tan especial.
+            </p>
+          </div>
+
+          <div className="centennial-draw__gallery">
+            <figure>
+              <img src={historicPharmacy} alt="Imagen histórica de Farmacia Del Pueblo" loading="lazy" />
+              <figcaption>Nuestra historia en el barrio.</figcaption>
+            </figure>
+            <figure>
+              <img src={pharmacyTeam} alt="Equipo histórico de Farmacia Del Pueblo" loading="lazy" />
+              <figcaption>Generaciones de atención cercana.</figcaption>
+            </figure>
+            <figure>
+              <img src={neighborhoodCare} alt="Atención a vecinos en Farmacia Del Pueblo" loading="lazy" />
+              <figcaption>El vínculo cotidiano con la comunidad.</figcaption>
+            </figure>
+          </div>
         </div>
       </section>
 

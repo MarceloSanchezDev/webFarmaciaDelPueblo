@@ -103,6 +103,66 @@
   line-height: 1.7;
 }
 
+.centennial-draw-section {
+  padding: 0 0 64px;
+}
+
+.centennial-draw {
+  width: min(100% - 32px, 1180px);
+  margin: 0 auto;
+  padding: 34px;
+  border: 1px solid var(--color-border);
+  border-radius: 32px;
+  background: linear-gradient(135deg, #e4f5ea, #ffffff);
+  box-shadow: var(--shadow);
+}
+
+.centennial-draw__content {
+  max-width: 720px;
+}
+
+.centennial-draw h2 {
+  margin: 0;
+  color: var(--color-primary-dark);
+  font-family: var(--font-title);
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  line-height: 1;
+}
+
+.centennial-draw__content p {
+  margin: 18px 0 0;
+  color: var(--color-muted);
+  line-height: 1.8;
+}
+
+.centennial-draw__gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.centennial-draw figure {
+  margin: 0;
+  overflow: hidden;
+  border-radius: 18px;
+  background: var(--color-white);
+}
+
+.centennial-draw img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.centennial-draw figcaption {
+  padding: 12px 14px;
+  color: var(--color-muted);
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
 .community-tips-section {
   padding: 0 0 64px;
 }
@@ -199,7 +259,8 @@
 
 @media (max-width: 920px) {
   .community-actions-grid,
-  .community-tips-card {
+  .community-tips-card,
+  .centennial-draw__gallery {
     grid-template-columns: 1fr;
   }
 
@@ -224,7 +285,8 @@
   }
 
   .community-tips-card,
-  .community-cta {
+  .community-cta,
+  .centennial-draw {
     padding: 24px;
   }
 }

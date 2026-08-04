@@ -1,10 +1,16 @@
-import "./ServiceCard.css";
+import './ServiceCard.css';
 
-const ServiceCard = ({ icon, title }) => {
+const ServiceCard = ({ icon, title, description, items = [] }) => {
   return (
-    <article className="service-card">
-      <span className="material-symbols-outlined">{icon}</span>
+    <article className="home-service-card">
+      <span className="material-symbols-outlined" aria-hidden="true">{icon}</span>
       <h3>{title}</h3>
+      <p>{description}</p>
+      {items.length > 0 && (
+        <ul>
+          {items.map((item) => <li key={item}>{item}</li>)}
+        </ul>
+      )}
     </article>
   );
 };

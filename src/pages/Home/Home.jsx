@@ -10,6 +10,9 @@ import {
   pharmacyContact,
 } from '../../data/contactData';
 import logo from '../../assets/logot.png';
+import communityHealthImage from '../../assets/logo.png';
+import communityRemodelingImage from '../../assets/remodelacion.jpeg';
+import communityDailyCareImage from '../../assets/segunda.jpeg';
 const trustItems = [
   {
     icon: "history_edu",
@@ -41,30 +44,39 @@ const services = [
   {
     icon: "medical_services",
     title: "Atención farmacéutica",
+    description: "Orientación profesional para consultas sobre medicamentos, productos y disponibilidad.",
+    items: ["Medicamentos recetados y de venta libre", "Consulta de disponibilidad", "Asesoramiento farmacéutico"],
   },
   {
     icon: "health_and_safety",
     title: "Obras sociales",
+    description: "Trabajamos con distintas coberturas. Antes de acercarte, consultanos para confirmar la documentación, receta y cobertura vigente.",
+    items: ["PAMI y PAMI 100%", "IOMA", "Unión Personal, SUTEBA y UPCN"],
   },
   {
     icon: "vaccines",
     title: "Aplicación de inyectables",
+    description: "Consultá previamente por WhatsApp para confirmar horarios de atención, disponibilidad del servicio y la documentación necesaria.",
   },
   {
     icon: "monitor_heart",
     title: "Control de presión",
+    description: "Realizamos control de presión como parte de nuestra atención diaria. Recomendamos consultar previamente por horarios y disponibilidad.",
   },
   {
     icon: "support_agent",
     title: "Asesoramiento profesional",
+    description: "Respondemos tus consultas de manera clara y responsable, para orientarte sobre productos, servicios y cuidados de uso cotidiano.",
   },
   {
     icon: "spa",
     title: "Perfumería y bienestar",
+    description: "Encontrá productos de higiene personal, cuidado corporal y artículos de uso diario para toda la familia.",
   },
   {
     icon: "chat",
     title: "Atención por WhatsApp",
+    description: "Escribinos para consultar disponibilidad, horarios, servicios u obras sociales antes de visitar la farmacia.",
   },
 ];
 
@@ -72,14 +84,20 @@ const communityItems = [
   {
     title: "Campañas de salud",
     description: "Acciones para promover el cuidado y la prevención.",
+    image: communityHealthImage,
+    imageAlt: 'Logo de Farmacia Del Pueblo',
   },
   {
     title: "Fechas especiales",
     description: "Momentos compartidos con la comunidad.",
+    image: communityRemodelingImage,
+    imageAlt: 'Remodelación de Farmacia Del Pueblo',
   },
   {
     title: "Atención cotidiana",
     description: "El vínculo diario con vecinos y familias.",
+    image: communityDailyCareImage,
+    imageAlt: 'Atención cotidiana en Farmacia Del Pueblo',
   },
 ];
 
@@ -187,6 +205,8 @@ const Home = () => {
                 key={service.title}
                 icon={service.icon}
                 title={service.title}
+                description={service.description}
+                items={service.items}
               />
             ))}
           </div>
@@ -234,7 +254,12 @@ const Home = () => {
           <div className="community-grid">
             {communityItems.map((item) => (
               <article className="community-card" key={item.title}>
-                <div className="community-card__image"></div>
+                <img
+                  className="community-card__image"
+                  src={item.image}
+                  alt={item.imageAlt}
+                  loading="lazy"
+                />
                 <div className="community-card__content">
                   <h3>{item.title}</h3>
                   <p>{item.description}</p>
