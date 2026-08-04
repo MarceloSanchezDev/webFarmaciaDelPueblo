@@ -87,7 +87,7 @@
   margin: 0 auto;
 
   display: grid;
-  gap: 28px;
+  gap: 52px;
 }
 
 .history-timeline::before {
@@ -158,6 +158,67 @@
 
 .history-timeline__content p + p {
   margin-top: 12px;
+}
+
+.history-timeline__flip-card {
+  perspective: 1200px;
+}
+
+.history-timeline__flip-card-inner {
+  position: relative;
+  display: grid;
+  width: 100%;
+  transition: transform 0.65s ease;
+  transform-style: preserve-3d;
+}
+
+.history-timeline__flip-card:hover .history-timeline__flip-card-inner,
+.history-timeline__flip-card:focus .history-timeline__flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.history-timeline__flip-card-front,
+.history-timeline__flip-card-back {
+  grid-area: 1 / 1;
+  margin: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.history-timeline__flip-card-front {
+  position: relative;
+}
+
+.history-timeline__flip-card-back {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border-radius: 28px;
+  background: var(--color-primary-dark);
+  transform: rotateY(180deg);
+}
+
+.history-timeline__flip-card-back img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .history-timeline__flip-card-inner {
+    gap: 14px;
+    transform: none !important;
+  }
+
+  .history-timeline__flip-card-front,
+  .history-timeline__flip-card-back {
+    position: relative;
+    min-height: 0;
+    transform: none;
+  }
+
+  .history-timeline__flip-card-back img { min-height: 260px; }
 }
 
 .history-values-section {

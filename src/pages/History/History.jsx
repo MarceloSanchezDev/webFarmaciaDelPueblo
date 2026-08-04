@@ -82,34 +82,47 @@ function History() {
         </div>
 
         <div className="history-timeline">
-          {historyMilestones.map((item) => (
-            <article
-              className="history-timeline__item"
-              key={`${item.year}-${item.title}`}
-            >
-              <div className="history-timeline__marker">
-                <span>{item.year}</span>
-              </div>
-
+          {historyMilestones.map((item) => {
+            const milestoneContent = (
               <div className="history-timeline__content">
                 <h3>{item.title}</h3>
-
                 <p>{item.description}</p>
-
-                {item.image && (
-                  <figure className="history-timeline__figure">
-                    <img
-                      src={item.image}
-                      alt={item.imageAlt || item.title}
-                      loading="lazy"
-                    />
-                  </figure>
-                )}
-
                 {item.details && <p>{item.details}</p>}
               </div>
-            </article>
-          ))}
+            );
+
+            return (
+              <article
+                className={`history-timeline__item ${item.image ? 'history-timeline__item--has-image' : ''}`}
+                key={`${item.year}-${item.title}`}
+              >
+                <div className="history-timeline__marker">
+                  <span>{item.year}</span>
+                </div>
+
+                {item.image ? (
+                  <div
+                    className="history-timeline__flip-card"
+                    tabIndex="0"
+                    aria-label={`${item.title}. Al pasar el mouse o enfocar, se muestra una fotografía.`}
+                  >
+                    <div className="history-timeline__flip-card-inner">
+                      <div className="history-timeline__flip-card-front">
+                        {milestoneContent}
+                      </div>
+                      <figure className="history-timeline__flip-card-back">
+                        <img
+                          src={item.image}
+                          alt={item.imageAlt || item.title}
+                          loading="lazy"
+                        />
+                      </figure>
+                    </div>
+                  </div>
+                ) : milestoneContent}
+              </article>
+            );
+          })}
         </div>
       </section>
 
