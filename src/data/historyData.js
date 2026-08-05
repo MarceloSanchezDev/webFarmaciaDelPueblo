@@ -1,4 +1,9 @@
 import farmaciaFondo from '../assets/farmaciaFondo.jpeg';
+import alisa from '../assets/alisa.jpeg';
+import cero from '../assets/cero.jpeg';
+import primer from '../assets/primer.jpeg';
+import segunda from '../assets/segunda.jpeg';
+import remodelacion from '../assets/remodelacion.jpeg';
 
 export const historyMilestones = [
   {
@@ -8,7 +13,7 @@ export const historyMilestones = [
       'La farmacia fue fundada en el año 1922, en lo que hoy es Avenida Rosas 531, por el Sr. Lombardo, siendo originalmente inaugurada como una botica.',
     details:
       'Al ser idóneo de farmacia, no pudo obtener la habilitación formal en ese momento.',
-    image: farmaciaFondo,
+    image: cero,
     imageAlt: 'Primera etapa de Farmacia Del Pueblo como botica en Avenida Rosas 531',
   },
   {
@@ -18,7 +23,7 @@ export const historyMilestones = [
       'Nueve años más tarde, la farmacia quedó oficializada en el mismo local.',
     details:
       'La farmacéutica Amanda Buffet fue la profesional a cargo de llevar adelante la farmacia. Años más tarde, el establecimiento se trasladó a Avenida Rosas 501.',
-    image: farmaciaFondo,
+    image: alisa,
     imageAlt: 'Oficialización histórica de Farmacia Del Pueblo',
   },
   {
@@ -28,7 +33,7 @@ export const historyMilestones = [
       'En el año 1957 aparecen en escena el Sr. Edelmiro Berea y su hija Alina, recientemente recibida de farmacéutica en la Universidad del Litoral, en Rosario.',
     details:
       'La familia provenía de Alcorta, provincia de Santa Fe, ciudad reconocida por el histórico Grito de Alcorta. Compraron la farmacia y el 14 de febrero comenzaron a operar.',
-    image: farmaciaFondo,
+    image: primer,
     imageAlt: 'Llegada de la familia Berea a Farmacia Del Pueblo en 1957',
   },
   {
@@ -38,7 +43,7 @@ export const historyMilestones = [
       'Luego de muchos esfuerzos, Edelmiro Berea compró un local con fondo en la dirección 521 de la misma Avenida Rosas.',
     details:
       'Allí comenzó la construcción del actual local y de la vivienda familiar.',
-    image: farmaciaFondo,
+    image: segunda,
     imageAlt: 'Crecimiento y construcción del local familiar de Farmacia Del Pueblo',
   },
   {
@@ -78,7 +83,7 @@ export const historyMilestones = [
       'Luego de afrontar la pandemia como cualquier otra farmacia, Farmacia Del Pueblo volvió a abrir sus puertas totalmente reformada.',
     details:
       'La remodelación marcó una nueva etapa para el establecimiento, manteniendo su identidad histórica y adaptándose a las necesidades actuales.',
-    image: farmaciaFondo,
+    image: remodelacion,
     imageAlt: 'Remodelación de Farmacia Del Pueblo luego de la pandemia',
   },
   {

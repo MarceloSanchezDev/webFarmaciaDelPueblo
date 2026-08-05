@@ -167,6 +167,9 @@
 
 .history-timeline__figure {
   margin: 0;
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
   overflow: hidden;
   border-radius: 28px;
   box-shadow: var(--shadow);
@@ -174,9 +177,9 @@
 
 .history-timeline__figure img {
   display: block;
-  width: 100%;
-  max-height: 360px;
-  object-fit: cover;
+  width: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 .history-values-section {
@@ -366,6 +369,10 @@
   .history-timeline__marker span {
     min-width: auto;
   }
+
+  .history-timeline__figure img {
+    width: 100%;
+  }
 }
 
 @media (max-width: 620px) {
@@ -391,10 +398,5 @@
 
   .history-tribute__content blockquote {
     padding-left: 18px;
-  }
-}
-@media (max-width: 620px) {
-  .history-timeline__figure img {
-    max-height: 260px;
   }
 }
