@@ -1,12 +1,9 @@
-import { useState } from 'react';
 import { getWhatsappUrl, pharmacyContact } from '../../data/contactData';
 import { historyMilestones, historyValues } from '../../data/historyData';
 import alisa from '../../assets/alisa.jpeg';
 import './History.css';
 
 function History() {
-  const [flippedMilestone, setFlippedMilestone] = useState(null);
-
   return (
     <main className="history-page">
       <section className="history-tribute-section">
@@ -87,7 +84,6 @@ function History() {
         <div className="history-timeline">
           {historyMilestones.map((item) => {
             const milestoneKey = `${item.year}-${item.title}`;
-            const isFlipped = flippedMilestone === milestoneKey;
             const milestoneContent = (
               <div className="history-timeline__content">
                 <h3>{item.title}</h3>
@@ -105,35 +101,18 @@ function History() {
                   <span>{item.year}</span>
                 </div>
 
-                {item.image ? (
-                  <div
-                    className={`history-timeline__flip-card ${isFlipped ? 'history-timeline__flip-card--flipped' : ''}`}
-                    tabIndex="0"
-                    role="button"
-                    aria-pressed={isFlipped}
-                    aria-label={`${item.title}. Tocá o presioná Enter para ${isFlipped ? 'volver al texto' : 'ver la fotografía'}.`}
-                    onClick={() => setFlippedMilestone(isFlipped ? null : milestoneKey)}
-                    onKeyDown={(event) => {
-                      if (event.key === 'Enter' || event.key === ' ') {
-                        event.preventDefault();
-                        setFlippedMilestone(isFlipped ? null : milestoneKey);
-                      }
-                    }}
-                  >
-                    <div className="history-timeline__flip-card-inner">
-                      <div className="history-timeline__flip-card-front">
-                        {milestoneContent}
-                      </div>
-                      <figure className="history-timeline__flip-card-back">
-                        <img
-                          src={item.image}
-                          alt={item.imageAlt || item.title}
-                          loading="lazy"
-                        />
-                      </figure>
-                    </div>
-                  </div>
-                ) : milestoneContent}
+                <div className="history-timeline__entry">
+                  {milestoneContent}
+                  {item.image && (
+                    <figure className="history-timeline__figure">
+                      <img
+                        src={item.image}
+                        alt={item.imageAlt || item.title}
+                        loading="lazy"
+                      />
+                    </figure>
+                  )}
+                </div>
               </article>
             );
           })}
