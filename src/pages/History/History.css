@@ -175,7 +175,7 @@
 }
 
 .history-timeline__flip-card:hover .history-timeline__flip-card-inner,
-.history-timeline__flip-card:focus .history-timeline__flip-card-inner {
+.history-timeline__flip-card--flipped .history-timeline__flip-card-inner {
   transform: rotateY(180deg);
 }
 
@@ -215,12 +215,12 @@
 }
 
 .history-timeline__flip-card:hover .history-timeline__flip-card-front,
-.history-timeline__flip-card:focus .history-timeline__flip-card-front {
+.history-timeline__flip-card--flipped .history-timeline__flip-card-front {
   opacity: 0;
 }
 
 .history-timeline__flip-card:hover .history-timeline__flip-card-back,
-.history-timeline__flip-card:focus .history-timeline__flip-card-back {
+.history-timeline__flip-card--flipped .history-timeline__flip-card-back {
   opacity: 1;
 }
 

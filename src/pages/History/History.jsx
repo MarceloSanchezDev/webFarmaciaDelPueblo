@@ -1,9 +1,12 @@
+import { useState } from 'react';
 import { getWhatsappUrl, pharmacyContact } from '../../data/contactData';
 import { historyMilestones, historyValues } from '../../data/historyData';
 import alisa from '../../assets/alisa.jpeg';
 import './History.css';
 
 function History() {
+  const [flippedMilestone, setFlippedMilestone] = useState(null);
+
   return (
     <main className="history-page">
       <section className="history-tribute-section">
@@ -83,6 +86,8 @@ function History() {
 
         <div className="history-timeline">
           {historyMilestones.map((item) => {
+            const milestoneKey = `${item.year}-${item.title}`;
+            const isFlipped = flippedMilestone === milestoneKey;
             const milestoneContent = (
               <div className="history-timeline__content">
                 <h3>{item.title}</h3>
@@ -94,7 +99,7 @@ function History() {
             return (
               <article
                 className={`history-timeline__item ${item.image ? 'history-timeline__item--has-image' : ''}`}
-                key={`${item.year}-${item.title}`}
+                key={milestoneKey}
               >
                 <div className="history-timeline__marker">
                   <span>{item.year}</span>
@@ -102,9 +107,18 @@ function History() {
 
                 {item.image ? (
                   <div
-                    className="history-timeline__flip-card"
+                    className={`history-timeline__flip-card ${isFlipped ? 'history-timeline__flip-card--flipped' : ''}`}
                     tabIndex="0"
-                    aria-label={`${item.title}. Al pasar el mouse o enfocar, se muestra una fotografía.`}
+                    role="button"
+                    aria-pressed={isFlipped}
+                    aria-label={`${item.title}. Tocá o presioná Enter para ${isFlipped ? 'volver al texto' : 'ver la fotografía'}.`}
+                    onClick={() => setFlippedMilestone(isFlipped ? null : milestoneKey)}
+                    onKeyDown={(event) => {
+                      if (event.key === 'Enter' || event.key === ' ') {
+                        event.preventDefault();
+                        setFlippedMilestone(isFlipped ? null : milestoneKey);
+                      }
+                    }}
                   >
                     <div className="history-timeline__flip-card-inner">
                       <div className="history-timeline__flip-card-front">
