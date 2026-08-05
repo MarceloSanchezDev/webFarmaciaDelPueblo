@@ -67,6 +67,12 @@ function Footer() {
           © {new Date().getFullYear()} {pharmacyContact.name}. Todos los
           derechos reservados.
         </p>
+        <p>
+          Creado por{' '}
+          <a href="https://www.dblock.com.ar" target="_blank" rel="noreferrer">
+            Dblock
+          </a>
+        </p>
       </div>
     </footer>
   );

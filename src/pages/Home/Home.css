@@ -253,16 +253,19 @@
 
 .community-section {
   padding-top: 60px;
+  padding-bottom: 90px;
 }
 
 .community-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  margin-top: 48px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(16px, 2vw, 24px);
+  margin-top: clamp(28px, 5vw, 48px);
 }
 
 .community-card {
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
   border-radius: var(--radius-md);
   background-color: var(--color-white);
@@ -271,13 +274,15 @@
 }
 
 .community-card__image {
-  height: 220px;
-  background: linear-gradient(135deg, #dff3e6, #a7dcb7);
-  background-size: cover;
-  background-position: center;
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center;
 }
 
 .community-card__content {
+  flex: 1;
   padding: 24px;
 }
 
@@ -361,6 +366,24 @@
 
   .location-section__info {
     padding: 28px;
+  }
+
+  .community-section {
+    padding-bottom: 70px;
+  }
+
+  .community-card__content {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 420px) {
+  .community-card__image {
+    aspect-ratio: 16 / 10;
+  }
+
+  .community-card h3 {
+    font-size: 1.25rem;
   }
 }
 

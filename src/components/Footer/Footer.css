@@ -71,6 +71,21 @@
   font-size: 0.9rem;
 }
 
+.footer-bottom p + p {
+  margin-top: 6px;
+}
+
+.footer-bottom a {
+  color: #a8e6bd;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.footer-bottom a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
 @media (max-width: 920px) {
   .footer-grid {
     grid-template-columns: 1fr 1fr;
