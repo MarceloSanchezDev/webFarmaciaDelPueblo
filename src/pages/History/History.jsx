@@ -1,11 +1,13 @@
 import { getWhatsappUrl, pharmacyContact } from '../../data/contactData';
 import { historyMilestones, historyValues } from '../../data/historyData';
 import alisa from '../../assets/alisa.jpeg';
+import Reveal from '../../components/UI/Reveal/Reveal';
 import './History.css';
 
 function History() {
   return (
     <main className="history-page">
+      <Reveal>
       <section className="history-tribute-section">
         <div className="history-tribute">
           <div className="history-tribute__content">
@@ -29,6 +31,8 @@ function History() {
           </div>
         </div>
       </section>
+      </Reveal>
+      <Reveal>
       <section className="history-hero">
         <div className="history-hero__content">
           <span className="section-kicker">Nuestra historia</span>
@@ -57,7 +61,9 @@ function History() {
           </div>
         </div>
       </section>
+      </Reveal>
 
+      <Reveal>
       <section className="history-intro">
         <div className="history-intro__content">
           <div>
@@ -74,7 +80,9 @@ function History() {
           </p>
         </div>
       </section>
+      </Reveal>
 
+      <Reveal>
       <section className="history-timeline-section">
         <div className="history-section-header">
           <span className="section-kicker">Línea de tiempo</span>
@@ -118,7 +126,9 @@ function History() {
           })}
         </div>
       </section>
+      </Reveal>
 
+      <Reveal>
       <section className="history-values-section">
         <div className="history-section-header">
           <span className="section-kicker">Valores</span>
@@ -138,7 +148,9 @@ function History() {
           ))}
         </div>
       </section>
+      </Reveal>
 
+      <Reveal>
       <section className="history-cta-section">
         <div className="history-cta">
           <div>
@@ -162,6 +174,7 @@ function History() {
           </a>
         </div>
       </section>
+      </Reveal>
     </main>
   );
 }

@@ -4,11 +4,13 @@ import {
   pharmacyContact,
 } from '../../data/contactData';
 import logo from '../../assets/logo.png';
+import Reveal from '../../components/UI/Reveal/Reveal';
 import './NotFound.css';
 
 function NotFound() {
   return (
     <main className="not-found-page">
+      <Reveal>
       <section className="not-found">
         <div className="not-found__content">
           <span className="not-found__code">404</span>
@@ -47,6 +49,7 @@ function NotFound() {
           <img className='img' src={logo} alt={pharmacyContact.name} />
         </div>
       </section>
+      </Reveal>
     </main>
   );
 }

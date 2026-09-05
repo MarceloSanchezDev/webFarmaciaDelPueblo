@@ -299,6 +299,55 @@
   line-height: 1.6;
 }
 
+.faq-section {
+  padding-top: 0;
+}
+
+.faq-list {
+  display: grid;
+  gap: 12px;
+  max-width: 860px;
+  margin: clamp(28px, 5vw, 48px) auto 0;
+}
+
+.faq-item {
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-white);
+  box-shadow: var(--shadow);
+}
+
+.faq-item summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  min-height: 62px;
+  padding: 16px 20px;
+  color: var(--color-primary-dark);
+  cursor: pointer;
+  font-weight: 800;
+  list-style: none;
+}
+
+.faq-item summary::-webkit-details-marker { display: none; }
+
+.faq-item summary .material-symbols-outlined {
+  flex: 0 0 auto;
+  color: var(--color-primary);
+  transition: transform 0.2s ease;
+}
+
+.faq-item[open] summary .material-symbols-outlined { transform: rotate(180deg); }
+
+.faq-item p {
+  margin: 0;
+  padding: 0 20px 20px;
+  color: var(--color-muted);
+  line-height: 1.7;
+}
+
 .home-location__map-embed {
   overflow: hidden;
   min-height: 340px;

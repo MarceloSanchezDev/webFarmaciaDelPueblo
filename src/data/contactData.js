@@ -5,12 +5,13 @@ export const pharmacyContact = {
   province: 'Buenos Aires',
   country: 'Argentina',
 
-  phone: '+54 1146990180',
+  phone: '+54 9 11 3358-8234',
   whatsappNumber: '5491133588234',
   whatsappMessage: 'Hola Farmacia Del Pueblo, quiero hacer una consulta.',
 
   email: '',
-  instagramUrl: '',
+  instagramUrl: 'https://www.instagram.com/farmaciadelpuebloldm?igsi=bXYwYXIxZ2NsOWI1',
+  mapsUrl: 'https://www.google.com/maps?cid=3849878974698229354&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAMYASAFKgSoqNcy',
   mapsEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.6023081885623!2d-58.5251617!3d-34.6647452!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc8f168665cdf%3A0x356d8487ab220e6a!2sFarmacia%20del%20Pueblo!5e0!3m2!1ses!2sar!4v1784046157971!5m2!1ses!2sar',
 
   openingHours: [
@@ -49,7 +50,7 @@ export function getFullAddress() {
 }
 
 export function getMapsUrl() {
-  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(getFullAddress())}`;
+  return pharmacyContact.mapsUrl;
 }
 
 export const pharmacySeo = {

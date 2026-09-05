@@ -3,11 +3,13 @@ import { communityActions, communityTips } from '../../data/communityData';
 import historicPharmacy from '../../assets/cero.jpeg';
 import pharmacyTeam from '../../assets/primer.jpeg';
 import neighborhoodCare from '../../assets/segunda.jpeg';
+import Reveal from '../../components/UI/Reveal/Reveal';
 import './Community.css';
 
 function Community() {
   return (
     <main className="community-page">
+      <Reveal>
       <section className="community-hero">
         <div className="community-hero__content">
           <span className="section-kicker">Comunidad</span>
@@ -36,7 +38,9 @@ function Community() {
           </div>
         </div>
       </section>
+      </Reveal>
 
+      <Reveal>
       <section className="community-actions-section">
         <div className="community-actions-header">
           <span className="section-kicker">Acompañamiento</span>
@@ -56,7 +60,9 @@ function Community() {
           ))}
         </div>
       </section>
+      </Reveal>
 
+      <Reveal>
       <section className="centennial-draw-section">
         <div className="centennial-draw">
           <div className="centennial-draw__content">
@@ -86,7 +92,9 @@ function Community() {
           </div>
         </div>
       </section>
+      </Reveal>
 
+      <Reveal>
       <section className="community-tips-section">
         <div className="community-tips-card">
           <div>
@@ -107,7 +115,9 @@ function Community() {
           </ul>
         </div>
       </section>
+      </Reveal>
 
+      <Reveal>
       <section className="community-cta-section">
         <div className="community-cta">
           <div>
@@ -131,6 +141,7 @@ function Community() {
           </a>
         </div>
       </section>
+      </Reveal>
     </main>
   );
 }

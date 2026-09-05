@@ -1,10 +1,12 @@
 import { getWhatsappUrl, pharmacyContact } from '../../data/contactData';
 import { healthInsurances, pharmacyServices } from '../../data/servicesData';
+import Reveal from '../../components/UI/Reveal/Reveal';
 import './Services.css';
 
 function Services() {
   return (
     <main className="services-page">
+      <Reveal>
       <section className="services-hero">
         <div className="services-hero__content">
           <span className="section-kicker">Servicios</span>
@@ -33,7 +35,9 @@ function Services() {
           </div>
         </div>
       </section>
+      </Reveal>
 
+      <Reveal>
       <section className="services-grid-section">
         <div className="services-grid">
           {pharmacyServices.map((service) => (
@@ -55,7 +59,9 @@ function Services() {
           ))}
         </div>
       </section>
+      </Reveal>
 
+      <Reveal>
       <section className="insurance-section">
         <div className="insurance-card">
           <div>
@@ -106,7 +112,9 @@ function Services() {
           </div>
         </div>
       </section>
+      </Reveal>
 
+      <Reveal>
       <section className="services-note-section">
         <div className="services-note">
           <span className="material-symbols-outlined" aria-hidden="true">
@@ -124,6 +132,7 @@ function Services() {
           </div>
         </div>
       </section>
+      </Reveal>
     </main>
   );
 }

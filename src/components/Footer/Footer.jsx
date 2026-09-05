@@ -46,6 +46,15 @@ function Footer() {
                 Escribir por WhatsApp
               </a>
             </li>
+            <li>
+              <a
+                href={pharmacyContact.instagramUrl}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Instagram
+              </a>
+            </li>
           </ul>
         </section>
 
