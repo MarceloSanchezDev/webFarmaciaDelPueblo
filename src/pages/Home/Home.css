@@ -336,7 +336,6 @@
 .faq-item summary .material-symbols-outlined {
   flex: 0 0 auto;
   color: var(--color-primary);
-  transition: transform 0.2s ease;
 }
 
 .faq-item[open] summary .material-symbols-outlined { transform: rotate(180deg); }

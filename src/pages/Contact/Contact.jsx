@@ -4,13 +4,11 @@ import {
   getWhatsappUrl,
   pharmacyContact,
 } from '../../data/contactData';
-import Reveal from '../../components/UI/Reveal/Reveal';
 import './Contact.css';
 
 function Contact() {
   return (
     <main className="contact-page">
-      <Reveal>
       <section className="contact-hero">
         <div className="contact-hero__content">
           <span className="section-kicker">Contacto</span>
@@ -43,9 +41,7 @@ function Contact() {
           </div>
         </div>
       </section>
-      </Reveal>
 
-      <Reveal>
       <section className="contact-content">
         <div className="contact-card">
           <span className="material-symbols-outlined" aria-hidden="true">
@@ -120,9 +116,7 @@ function Contact() {
           </div>
         </div>
       </section>
-      </Reveal>
 
-      <Reveal>
       <section className="contact-map-section">
         <div className="contact-map-card">
           <div>
@@ -156,7 +150,6 @@ function Contact() {
           </div>
         </div>
       </section>
-      </Reveal>
     </main>
   );
 }

@@ -3,8 +3,6 @@ import Button from '../../components/UI/Buttons/Buttons';
 import SectionHeader from '../../components/UI/SectionHeader/SectionHeader';
 import InfoCard from '../../components/UI/InfoCard/InfoCard';
 import ServiceCard from '../../components/UI/ServiceCard/ServiceCard';
-import Reveal from '../../components/UI/Reveal/Reveal';
-import SpotlightCard from '../../components/UI/SpotlightCard/SpotlightCard';
 import CountUp from '../../components/UI/CountUp/CountUp';
 import {
   getFullAddress,
@@ -127,7 +125,6 @@ const Home = () => {
   return (
     <>
       <main className="home">
-        <Reveal>
         <section className="hero">
           <div className="hero__overlay"></div>
 
@@ -167,33 +164,26 @@ const Home = () => {
             </ul>
           </div>
         </section>
-        </Reveal>
 
         <section className="home-section">
-          <Reveal>
-            <SectionHeader
-              eyebrow="Nuestra esencia"
-              title="Confianza, cercanía y compromiso"
-              description="Nuestra atención va más allá de entregar medicamentos. Construimos vínculos basados en la confianza, la ética y el cuidado humano."
-            />
-          </Reveal>
+          <SectionHeader
+            eyebrow="Nuestra esencia"
+            title="Confianza, cercanía y compromiso"
+            description="Nuestra atención va más allá de entregar medicamentos. Construimos vínculos basados en la confianza, la ética y el cuidado humano."
+          />
 
           <div className="cards-grid cards-grid--four">
-            {trustItems.map((item, index) => (
-              <Reveal key={item.title} delay={index * 80}>
-                <SpotlightCard>
-                  <InfoCard
-                    icon={item.icon}
-                    title={item.title}
-                    description={item.description}
-                  />
-                </SpotlightCard>
-              </Reveal>
+            {trustItems.map((item) => (
+              <InfoCard
+                key={item.title}
+                icon={item.icon}
+                title={item.title}
+                description={item.description}
+              />
             ))}
           </div>
         </section>
 
-        <Reveal>
         <section className="origin-section" id="origen">
           <div className="origin-section__content">
             <span className="section-eyebrow">El origen</span>
@@ -221,34 +211,27 @@ const Home = () => {
             </div>
           </div>
         </section>
-        </Reveal>
 
         <section className="home-section">
-          <Reveal>
-            <SectionHeader
-              eyebrow="Servicios"
-              title="Servicios farmacéuticos para tu bienestar"
-              description="Brindamos atención profesional, asesoramiento personalizado y servicios pensados para acompañarte en tu salud diaria."
-            />
-          </Reveal>
+          <SectionHeader
+            eyebrow="Servicios"
+            title="Servicios farmacéuticos para tu bienestar"
+            description="Brindamos atención profesional, asesoramiento personalizado y servicios pensados para acompañarte en tu salud diaria."
+          />
 
           <div className="services-grid">
-            {services.map((service, index) => (
-              <Reveal key={service.title} delay={index * 70}>
-                <SpotlightCard>
-                  <ServiceCard
-                    icon={service.icon}
-                    title={service.title}
-                    description={service.description}
-                    items={service.items}
-                  />
-                </SpotlightCard>
-              </Reveal>
+            {services.map((service) => (
+              <ServiceCard
+                key={service.title}
+                icon={service.icon}
+                title={service.title}
+                description={service.description}
+                items={service.items}
+              />
             ))}
           </div>
         </section>
 
-        <Reveal>
         <section className="location-section" id="ubicacion">
           <div className="location-section__info">
             <span className="section-eyebrow">Dónde estamos</span>
@@ -280,59 +263,48 @@ const Home = () => {
   />
 </div>
         </section>
-        </Reveal>
 
         <section className="home-section community-section">
-          <Reveal>
-            <SectionHeader
-              eyebrow="Comunidad"
-              title="Historias y momentos del barrio"
-              description="Compartimos campañas, fechas especiales, consejos simples de salud y acciones locales."
-            />
-          </Reveal>
+          <SectionHeader
+            eyebrow="Comunidad"
+            title="Historias y momentos del barrio"
+            description="Compartimos campañas, fechas especiales, consejos simples de salud y acciones locales."
+          />
 
           <div className="community-grid">
-            {communityItems.map((item, index) => (
-              <Reveal key={item.title} delay={index * 100}>
-                <SpotlightCard>
-                  <article className="community-card">
-                    <img
-                      className="community-card__image"
-                      src={item.image}
-                      alt={item.imageAlt}
-                      loading="lazy"
-                    />
-                    <div className="community-card__content">
-                      <h3>{item.title}</h3>
-                      <p>{item.description}</p>
-                    </div>
-                  </article>
-                </SpotlightCard>
-              </Reveal>
+            {communityItems.map((item) => (
+              <article className="community-card" key={item.title}>
+                <img
+                  className="community-card__image"
+                  src={item.image}
+                  alt={item.imageAlt}
+                  loading="lazy"
+                />
+                <div className="community-card__content">
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
+                </div>
+              </article>
             ))}
           </div>
         </section>
 
         <section className="home-section faq-section">
-          <Reveal>
-            <SectionHeader
-              eyebrow="Preguntas frecuentes"
-              title="Información útil antes de tu visita"
-              description="Si necesitás una confirmación puntual, escribinos por WhatsApp y te orientamos."
-            />
-          </Reveal>
+          <SectionHeader
+            eyebrow="Preguntas frecuentes"
+            title="Información útil antes de tu visita"
+            description="Si necesitás una confirmación puntual, escribinos por WhatsApp y te orientamos."
+          />
 
           <div className="faq-list">
-            {frequentlyAskedQuestions.map((item, index) => (
-              <Reveal key={item.question} delay={index * 70}>
-                <details className="faq-item">
-                  <summary>
-                    {item.question}
-                    <span className="material-symbols-outlined" aria-hidden="true">expand_more</span>
-                  </summary>
-                  <p>{item.answer}</p>
-                </details>
-              </Reveal>
+            {frequentlyAskedQuestions.map((item) => (
+              <details className="faq-item" key={item.question}>
+                <summary>
+                  {item.question}
+                  <span className="material-symbols-outlined" aria-hidden="true">expand_more</span>
+                </summary>
+                <p>{item.answer}</p>
+              </details>
             ))}
           </div>
         </section>
