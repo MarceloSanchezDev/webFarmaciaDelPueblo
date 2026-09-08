@@ -16,12 +16,12 @@ export const pharmacyContact = {
 
   openingHours: [
     {
-      day: 'Lunes a viernes',
-      hours: '09:00 a 13:00 16:30 a 21:00',
+      day: 'Lunes a sábados',
+      hours: '09:00 a 13:00',
     },
     {
-      day: 'Sábados',
-      hours: '09:00 a 13:00',
+      day: 'Lunes a viernes',
+      hours: '16:00 a 19:30',
     },
     {
       day: 'Domingos',

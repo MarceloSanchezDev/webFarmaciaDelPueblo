@@ -113,7 +113,7 @@ const frequentlyAskedQuestions = [
   },
   {
     question: '¿Cuáles son los horarios de atención?',
-    answer: 'Atendemos de lunes a viernes de 09:00 a 13:00 y de 16:30 a 21:00. Los sábados, de 09:00 a 13:00.',
+    answer: 'Atendemos de lunes a sábados de 09:00 a 13:00 y de lunes a viernes de 16:00 a 19:30.',
   },
   {
     question: '¿Dónde está ubicada la farmacia?',
@@ -159,7 +159,7 @@ const Home = () => {
               </li>
               <li>
                 <span className="material-symbols-outlined" aria-hidden="true">schedule</span>
-                Lun. a vie. 09:00–13:00 y 16:30–21:00
+                Lun. a sáb. 09:00–13:00 y lun. a vie. 16:00–19:30
               </li>
             </ul>
           </div>
