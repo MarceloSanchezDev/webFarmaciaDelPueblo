@@ -83,6 +83,19 @@ function Contact() {
 
         <div className="contact-card">
           <span className="material-symbols-outlined" aria-hidden="true">
+            mail
+          </span>
+
+          <div>
+            <h2>Email</h2>
+            <p>{pharmacyContact.email}</p>
+
+            
+          </div>
+        </div>
+
+        <div className="contact-card">
+          <span className="material-symbols-outlined" aria-hidden="true">
             schedule
           </span>
 
