@@ -54,9 +54,9 @@ export function getMapsUrl() {
 }
 
 export const pharmacySeo = {
-  siteUrl: 'https://web-farmacia-del-pueblo.vercel.app',
-  title: 'Farmacia Del Pueblo | Farmacia en Lomas del Mirador',
+  siteUrl: 'https://www.delpueblofarmacia.com.ar',
+  title: 'Farmacia Del Pueblo en Lomas del Mirador | Medicamentos y obras sociales',
   description:
-    'Farmacia Del Pueblo ofrece atención farmacéutica, medicamentos, perfumería, obras sociales, control de presión y asesoramiento profesional.',
+    'Farmacia Del Pueblo en Lomas del Mirador: medicamentos, obras sociales, perfumería, control de presión y atención farmacéutica personalizada.',
   image: '/logo.png',
 };

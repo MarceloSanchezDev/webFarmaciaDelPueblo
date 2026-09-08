@@ -7,40 +7,44 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Farmacia Del Pueblo | Farmacia en Lomas del Mirador</title>
+    <title>Farmacia Del Pueblo en Lomas del Mirador | Medicamentos y obras sociales</title>
 
     <meta
       name="description"
-      content="Farmacia Del Pueblo ofrece atención farmacéutica, medicamentos, perfumería, obras sociales, control de presión y asesoramiento profesional en Lomas del Mirador."
+      content="Farmacia Del Pueblo en Lomas del Mirador: medicamentos, obras sociales, perfumería, control de presión y atención farmacéutica personalizada."
     />
 
     <meta
       name="keywords"
-      content="farmacia, farmacia del pueblo, medicamentos, obras sociales, perfumería, control de presión, farmacia en Lomas del Mirador"
+      content="farmacia Lomas del Mirador, farmacia del pueblo, medicamentos, obras sociales, PAMI, IOMA, perfumería, control de presión"
     />
 
     <meta name="robots" content="index, follow" />
     <meta name="author" content="Farmacia Del Pueblo" />
     <meta name="theme-color" content="#196f3d" />
 
-    <meta property="og:title" content="Farmacia Del Pueblo" />
+    <meta property="og:site_name" content="Farmacia Del Pueblo" />
+    <meta property="og:locale" content="es_AR" />
+    <meta property="og:title" content="Farmacia Del Pueblo en Lomas del Mirador" />
     <meta
       property="og:description"
-      content="Atención farmacéutica cercana, profesional y comprometida con la comunidad."
+      content="Medicamentos, obras sociales, perfumería y atención farmacéutica personalizada."
     />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://web-farmacia-del-pueblo.vercel.app/" />
-    <meta property="og:image" content="https://web-farmacia-del-pueblo.vercel.app/logo.png" />
+    <meta property="og:url" content="https://www.delpueblofarmacia.com.ar/" />
+    <meta property="og:image" content="https://www.delpueblofarmacia.com.ar/logo.png" />
+    <meta property="og:image:alt" content="Logo de Farmacia Del Pueblo" />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Farmacia Del Pueblo" />
+    <meta name="twitter:title" content="Farmacia Del Pueblo en Lomas del Mirador" />
     <meta
       name="twitter:description"
-      content="Farmacia, medicamentos, obras sociales, perfumería y atención personalizada."
+      content="Medicamentos, obras sociales, perfumería y atención farmacéutica personalizada."
     />
-    <meta name="twitter:image" content="https://web-farmacia-del-pueblo.vercel.app/logo.png" />
+    <meta name="twitter:image" content="https://www.delpueblofarmacia.com.ar/logo.png" />
+    <meta name="twitter:image:alt" content="Logo de Farmacia Del Pueblo" />
 
-    <link rel="canonical" href="https://web-farmacia-del-pueblo.vercel.app/" />
+    <link rel="canonical" href="https://www.delpueblofarmacia.com.ar/" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -51,8 +55,11 @@
         "@type": "Pharmacy",
         "name": "Farmacia Del Pueblo",
         "description": "Farmacia Del Pueblo ofrece atención farmacéutica, medicamentos, perfumería, obras sociales y asesoramiento profesional.",
-        "url": "https://web-farmacia-del-pueblo.vercel.app/",
+        "@id": "https://www.delpueblofarmacia.com.ar/#farmacia",
+        "url": "https://www.delpueblofarmacia.com.ar/",
+        "image": "https://www.delpueblofarmacia.com.ar/logo.png",
         "telephone": "+54 9 11 3358-8234",
+        "hasMap": "https://www.google.com/maps?cid=3849878974698229354",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Brig. Gral. Juan Manuel de Rosas 523",
@@ -60,9 +67,30 @@
           "addressRegion": "Buenos Aires",
           "addressCountry": "AR"
         },
-        "openingHours": [
-          "Mo-Fr 09:00-13:00,16:30-21:00",
-          "Sa 09:00-13:00"
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -34.6647452,
+          "longitude": -58.5251617
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "09:00",
+            "closes": "13:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "16:30",
+            "closes": "21:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Saturday",
+            "opens": "09:00",
+            "closes": "13:00"
+          }
         ],
         "sameAs": [
           "https://www.instagram.com/farmaciadelpuebloldm?igsi=bXYwYXIxZ2NsOWI1"

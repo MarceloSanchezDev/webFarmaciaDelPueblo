@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://web-farmacia-del-pueblo.vercel.app/sitemap.xml
+Sitemap: https://www.delpueblofarmacia.com.ar/sitemap.xml

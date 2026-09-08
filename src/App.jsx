@@ -4,6 +4,7 @@ import { Route, Routes } from 'react-router-dom';
 import Navbar from './components/NavBar/NavBar';
 import Footer from './components/Footer/Footer';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
+import Seo from './components/Seo/Seo';
 
 const Home = lazy(() => import('./pages/Home/Home'));
 const History = lazy(() => import('./pages/History/History'));
@@ -17,6 +18,7 @@ function App() {
     <>
       <a className="skip-link" href="#main-content">Saltar al contenido principal</a>
       <ScrollToTop />
+      <Seo />
       <Navbar />
 
       <div id="main-content" tabIndex="-1">
